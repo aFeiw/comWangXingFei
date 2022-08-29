@@ -1,0 +1,21 @@
+{
+  "name": "wangxingfeicom",
+  "version": "1.0.0",
+  "description": "persional doc about wangxingfei",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "pages": "npm run build && bash scripts/deploy-gh.sh"
+  },
+  "author": "wangxingfei",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.12",
+    "vue": "^3.2.37",
+    "@vuepress/plugin-search": "^1.8.2",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^6.1.0"
+  }
+}

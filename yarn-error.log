@@ -1,0 +1,31 @@
+Arguments: 
+  D:\node\node.exe D:\node\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\DJ033041\bin;D:\git\Git\mingw64\bin;D:\git\Git\usr\local\bin;D:\git\Git\usr\bin;D:\git\Git\usr\bin;D:\git\Git\mingw64\bin;D:\git\Git\usr\bin;C:\Users\DJ033041\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;D:\git\Git\cmd;D:\jdk\jdk1.8.0_144\bin;D:\mysql\mysql-8.0.26-winx64;D:\mysql\mysql-8.0.26-winx64\bin;D:\nvm\nvm;D:\node;C:\Users\DJ033041\AppData\Local\Microsoft\WindowsApps;D:\vs\Microsoft VS Code\bin;D:\idea\IntelliJ IDEA 2021.3.3\bin;C:\Users\DJ033041\AppData\Local\GitHubDesktop\bin;D:\nvm\nvm;D:\node;D:\git\Git\usr\bin\vendor_perl;D:\git\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.20.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (D:\nvm\nvm\v14.20.0\node_modules\yarn\lib\cli.js:92864:59)
+      at Object.<anonymous> (D:\nvm\nvm\v14.20.0\node_modules\yarn\lib\cli.js:85054:38)
+      at Generator.next (<anonymous>)
+      at step (D:\nvm\nvm\v14.20.0\node_modules\yarn\lib\cli.js:310:30)
+      at D:\nvm\nvm\v14.20.0\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
