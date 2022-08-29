@@ -1,5 +1,5 @@
 ---
-layout : home
+layout: home
 hero:
   name: 王兴飞文档
   text: 涵盖个人总结开发技术点
@@ -16,6 +16,9 @@ features:
     details: Lorem ipsum...
   - icon: 🖖
     title: Power of Vue meets Markdown
+    details: Lorem ipsum...
+  - icon: 🛠️
+    title: Simple and minimal, always
     details: Lorem ipsum...
   - icon: 🛠️
     title: Simple and minimal, always
