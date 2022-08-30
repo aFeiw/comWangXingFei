@@ -81,7 +81,7 @@ module.exports = {
               },
               {
                 text: 'Vue3',
-                link: '/frontend/Vue3/',
+                link: '/frontend/VuePalse/',
               },
               {
                 text: 'React',
@@ -104,7 +104,7 @@ module.exports = {
     sidebar: {
       '/frontend/HTML/': frontendHTML(),
       '/frontend/CSS/': frontendCSS(),
-      '/frontend/Vue3/': frontendVue3(),
+      '/frontend/VuePalse/': frontendVue3(),
     },
   },
 }
