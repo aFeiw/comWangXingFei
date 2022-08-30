@@ -66,7 +66,9 @@ module.exports = {
         ],
       },
       { text: '后端', link: '/https://www.jianshu.com/' },
-      { text: '数据库', link: '/https://www.jianshu.com/' },
+      { text: '工具软件', link: '/https://www.jianshu.com/' },
+      { text: '面试总结', link: '/https://www.jianshu.com/' },
+      { text: '插件扩展', link: '/https://www.jianshu.com/' },
       { text: '简书', link: 'https://www.jianshu.com/' },
     ],
     sidebar: {
