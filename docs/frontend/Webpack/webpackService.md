@@ -137,13 +137,13 @@
 
 - proxy 是我们开发中非常常用的一个配置选项，它的目的设置代理来解决跨域访问的问题：
 
-  - 比如我们的一个 api 请求是 http://localhost:8888，但是本地启动服务器的域名是 http://localhost:8000，这 个时候发送网络请求就会出现跨域的问题；
+  - 比如我们的一个 api 请求是 '...localhost:8888'，但是本地启动服务器的域名是 '...localhost:8000'，这 个时候发送网络请求就会出现跨域的问题；
 
   - 那么我们可以将请求先发送到一个代理服务器，代理服务器和 API 服务器没有跨域的问题，就可以解决我们的跨 域问题了；
 
 - 我们可以进行如下的设置：
 
-  - target：表示的是代理到的目标地址，比如 /api-hy/moment 会被代理到 http://localhost:8888/api-hy/moment；
+  - target：表示的是代理到的目标地址，比如 /api-hy/moment 会被代理到 '...localhost:8888/api-hy/moment'；
 
   - pathRewrite：默认情况下，我们的 /api-hy 也会被写入到 URL 中，如果希望删除，可以使用 pathRewrite；
 
