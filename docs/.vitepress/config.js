@@ -2,6 +2,7 @@
 import { frontendHTML } from "../../router/frontend/html"
 //引入css侧边栏导航配置
 import { frontendCSS } from "../../router/frontend/css"
+//
 module.exports = {
   title: 'WangXingFei',
   titleTemplate: 'wangxingfei Private web site',
