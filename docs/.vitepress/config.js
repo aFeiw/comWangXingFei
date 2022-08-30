@@ -1,8 +1,9 @@
 //引入html侧边栏导航配置
-import { frontendHTML } from "../../router/frontend/html"
+import { frontendHTML } from '../../router/frontend/html'
 //引入css侧边栏导航配置
-import { frontendCSS } from "../../router/frontend/css"
-//
+import { frontendCSS } from '../../router/frontend/css'
+//引入vue3侧边栏导航配置
+import { frontendVue3 } from '../../router/frontend/vue3'
 module.exports = {
   title: 'WangXingFei',
   titleTemplate: 'wangxingfei Private web site',
@@ -54,33 +55,39 @@ module.exports = {
       { text: '首页', link: '/' },
       {
         text: '大前端',
-        activeMatch: '/frontend/HTML/',
+        activeMatch: '/frontend/',
         items: [
-          { 
-            items:[
           {
-            text: 'HTML', link: '/frontend/HTML/', 
+            items: [
+              {
+                text: 'HTML',
+                link: '/frontend/HTML/',
+              },
+              {
+                text: 'CSS',
+                link: '/frontend/CSS/',
+              },
+              {
+                text: 'JavaScript',
+                link: '/frontend/Javascript/',
+              },
+            ],
           },
           {
-            text: 'CSS',   link: '/frontend/CSS/',
-          },
-          {
-            text: 'JavaScript',  link: '/frontend/Javascript/',
-          },  
-            ]
-           },
-          {
-            items:[
+            items: [
               {
-                text: 'Vue2',  link: '/frontend/Vue2/',
+                text: 'Vue2',
+                link: '/frontend/Vue2/',
               },
               {
-                text: 'Vue3', link: '/frontend/Vue3/',
+                text: 'Vue3',
+                link: '/frontend/Vue3/',
               },
               {
-                text: 'React', link: '/frontend/React/',
+                text: 'React',
+                link: '/frontend/React/',
               },
-            ] 
+            ],
           },
           {
             text: 'Webpack',
@@ -96,7 +103,8 @@ module.exports = {
     ],
     sidebar: {
       '/frontend/HTML/': frontendHTML(),
-      '/frontend/CSS/':frontendCSS()
+      '/frontend/CSS/': frontendCSS(),
+      '/frontend/Vue3/': frontendVue3(),
     },
   },
 }
