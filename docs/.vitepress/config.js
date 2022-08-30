@@ -4,11 +4,15 @@ import { frontendHTML } from '../../router/frontend/html'
 import { frontendCSS } from '../../router/frontend/css'
 //引入vue侧边栏导航配置
 import { frontendVue2 } from '../../router/frontend/vue2'
+//引入typeScript侧边栏导航配置
+import { frontendTypescript } from '../../router/frontend/typescript'
+//引入Webpack侧边栏导航配置
+import { frontendWebpack } from '../../router/frontend/Webpack'
 //引入工具软件栏目侧边栏导航配置
 import { vueRouter } from '../../router/toolSoftware/vueRouter'
 import { vueX } from '../../router/toolSoftware/vueX'
 import { pinia } from '../../router/toolSoftware/pinia'
-
+//
 module.exports = {
   title: 'WangXingFei',
   titleTemplate: 'wangxingfei Private web site',
@@ -76,6 +80,10 @@ module.exports = {
                 text: 'JavaScript',
                 link: '/frontend/Javascript/',
               },
+              {
+                text: 'TypeScript',
+                link: '/frontend/Typescript/get-started-quickly',
+              },
             ],
           },
           {
@@ -96,7 +104,7 @@ module.exports = {
           },
           {
             text: 'Webpack',
-            link: '/frontend/Webpack/',
+            link: '/frontend/Webpack/basic',
           },
         ],
       },
@@ -131,6 +139,8 @@ module.exports = {
       '/frontend/CSS/': frontendCSS(),
       '/frontend/Vue2/': frontendVue2(),
       '/frontend/Vue3/': frontendVue2(),
+      '/frontend/Typescript/': frontendTypescript(),
+      '/frontend/Webpack/': frontendWebpack(),
       '/toolSoftware/VueRouter/': vueRouter(),
       '/toolSoftware/Vuex/': vueX(),
       '/toolSoftware/Pinia/': pinia(),
