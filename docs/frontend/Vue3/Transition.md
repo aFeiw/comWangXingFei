@@ -62,7 +62,7 @@ export default {
 
 ### 12.1.1 基于 CSS 的过渡
 
-![img](../../vue/transition-classes.f0f7b3c9.png)
+![img](../../public/vue/transition-classes.f0f7b3c9.png)
 
 - 我们会发现上面提到了很多个 class，事实上 Vue 就是帮助我们在这些 class 之间来回切换完成的动画：
 

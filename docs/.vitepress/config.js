@@ -81,7 +81,7 @@ module.exports = {
               },
               {
                 text: 'Vue3',
-                link: '/frontend/Vue3/',
+                link: '/frontend/Vue3/basicConcepts.md',
               },
               {
                 text: 'React',
@@ -96,8 +96,28 @@ module.exports = {
         ],
       },
       { text: '后端', link: '/https://www.jianshu.com/' },
-      { text: '工具软件', link: '/https://www.jianshu.com/' },
-      { text: '面试总结', link: '/https://www.jianshu.com/' },
+      {
+        text: '工具软件',
+        activeMatch: '/toolSoftware/',
+        items: [
+          {
+            items: [
+              {
+                text: 'Vue-Router',
+                link: '/toolSoftware/VueRouter/',
+              },
+              {
+                text: 'Vuex',
+                link: '/toolSoftware/Vuex/',
+              },
+              {
+                text: 'Pinia',
+                link: '/frontend/Pinia/',
+              },
+            ],
+          },
+        ],
+      },
       { text: '插件扩展', link: '/https://www.jianshu.com/' },
       { text: '简书', link: 'https://www.jianshu.com/' },
     ],
@@ -105,6 +125,7 @@ module.exports = {
       '/frontend/HTML/': frontendHTML(),
       '/frontend/CSS/': frontendCSS(),
       '/frontend/Vue2/': frontendVue2(),
+      '/frontend/Vue3/': frontendVue2(),
     },
   },
 }

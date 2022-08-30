@@ -3,7 +3,7 @@ export function frontendVue2() {
     {
       //开启折叠
       collapsible: true,
-      text: 'Vue2基础',
+      text: 'Vue基础',
       items: [
         { text: 'Vue3的基础概念', link: '/frontend/Vue2/basicConcepts' },
         { text: '@vue/cli脚手架', link: '/frontend/Vue2/vue-cli' },
@@ -16,7 +16,7 @@ export function frontendVue2() {
     {
       //开启折叠
       collapsible: true,
-      text: 'Vue2进阶',
+      text: 'Vue进阶',
       items: [
         { text: 'vue基本指令', link: '/frontend/Vue2/basicinStruction' },
         { text: 'v-bind和v-on', link: '/frontend/Vue2/v-bindAndv-on' },
@@ -26,7 +26,7 @@ export function frontendVue2() {
     {
       //开启折叠
       collapsible: true,
-      text: 'Vue2组件',
+      text: 'Vue组件',
       items: [
         { text: '组件基础', link: '/frontend/Vue2/componentFoundationt' },
         {
