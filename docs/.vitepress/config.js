@@ -3,7 +3,7 @@ import { frontendHTML } from '../../router/frontend/html'
 //引入css侧边栏导航配置
 import { frontendCSS } from '../../router/frontend/css'
 //引入vue3侧边栏导航配置
-import { frontendVue3 } from '../../router/frontend/vue3'
+import { frontendVue2 } from '../../router/frontend/vue2'
 module.exports = {
   title: 'WangXingFei',
   titleTemplate: 'wangxingfei Private web site',
@@ -77,11 +77,11 @@ module.exports = {
             items: [
               {
                 text: 'Vue2',
-                link: '/frontend/Vue2/',
+                link: '/frontend/Vue2/basicConcepts.md',
               },
               {
                 text: 'Vue3',
-                link: '/frontend/VuePalse/',
+                link: '/frontend/Vue3/',
               },
               {
                 text: 'React',
@@ -104,7 +104,7 @@ module.exports = {
     sidebar: {
       '/frontend/HTML/': frontendHTML(),
       '/frontend/CSS/': frontendCSS(),
-      '/frontend/VuePalse/': frontendVue3(),
+      '/frontend/Vue2/': frontendVue2(),
     },
   },
 }
