@@ -2,8 +2,13 @@
 import { frontendHTML } from '../../router/frontend/html'
 //引入css侧边栏导航配置
 import { frontendCSS } from '../../router/frontend/css'
-//引入vue3侧边栏导航配置
+//引入vue侧边栏导航配置
 import { frontendVue2 } from '../../router/frontend/vue2'
+//引入工具软件栏目侧边栏导航配置
+import { vueRouter } from '../../router/toolSoftware/vueRouter'
+import { vueX } from '../../router/toolSoftware/vueX'
+import { pinia } from '../../router/toolSoftware/pinia'
+
 module.exports = {
   title: 'WangXingFei',
   titleTemplate: 'wangxingfei Private web site',
@@ -77,11 +82,11 @@ module.exports = {
             items: [
               {
                 text: 'Vue2',
-                link: '/frontend/Vue2/basicConcepts.md',
+                link: '/frontend/Vue2/basicConcepts',
               },
               {
                 text: 'Vue3',
-                link: '/frontend/Vue3/basicConcepts.md',
+                link: '/frontend/Vue3/basicConcepts',
               },
               {
                 text: 'React',
@@ -112,7 +117,7 @@ module.exports = {
               },
               {
                 text: 'Pinia',
-                link: '/frontend/Pinia/',
+                link: '/toolSoftware/Pinia/',
               },
             ],
           },
@@ -126,6 +131,9 @@ module.exports = {
       '/frontend/CSS/': frontendCSS(),
       '/frontend/Vue2/': frontendVue2(),
       '/frontend/Vue3/': frontendVue2(),
+      '/toolSoftware/VueRouter/': vueRouter(),
+      '/toolSoftware/Vuex/': vueX(),
+      '/toolSoftware/Pinia/': pinia(),
     },
   },
 }
