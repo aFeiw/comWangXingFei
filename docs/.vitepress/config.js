@@ -53,6 +53,7 @@ module.exports = {
       { text: '首页', link: '/' },
       {
         text: '大前端',
+        activeMatch: '/frontend/HTML/',
         items: [
           { 
             items:[
