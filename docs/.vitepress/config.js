@@ -1,3 +1,7 @@
+//引入html侧边栏导航配置
+import { frontendHTML } from "../../router/frontend/html"
+//引入css侧边栏导航配置
+import { frontendCSS } from "../../router/frontend/css"
 module.exports = {
   title: 'WangXingFei',
   titleTemplate: 'wangxingfei Private web site',
@@ -7,7 +11,6 @@ module.exports = {
   base: '/docs/',
   lang: 'zh-CN',
   lastUpdated: true,
-
   markdown: {
     theme: 'github-dark',
     lineNumbers: true,
@@ -51,33 +54,31 @@ module.exports = {
       {
         text: '大前端',
         items: [
+          { 
+            items:[
           {
-            text: 'HTML',
-            link: '/frontend/HTML/',
+            text: 'HTML', link: '/frontend/HTML/', 
           },
           {
-            text: 'CSS',
-            link: '/frontend/CSS/',
+            text: 'CSS',   link: '/frontend/CSS/',
           },
           {
-            text: 'JavaScript',
-            link: '/frontend/Javascript/',
-          },
+            text: 'JavaScript',  link: '/frontend/Javascript/',
+          },  
+            ]
+           },
           {
-            text: 'Node',
-            link: '/frontend/Node/',
-          },
-          {
-            text: 'Vue2',
-            link: '/frontend/Vue2/',
-          },
-          {
-            text: 'Vue3',
-            link: '/frontend/Vue3/',
-          },
-          {
-            text: 'React',
-            link: '/frontend/React/',
+            items:[
+              {
+                text: 'Vue2',  link: '/frontend/Vue2/',
+              },
+              {
+                text: 'Vue3', link: '/frontend/Vue3/',
+              },
+              {
+                text: 'React', link: '/frontend/React/',
+              },
+            ] 
           },
           {
             text: 'Webpack',
@@ -92,79 +93,8 @@ module.exports = {
       { text: '简书', link: 'https://www.jianshu.com/' },
     ],
     sidebar: {
-      '/frontend/HTML/': [
-        {
-          text: 'HTML布局及其他',
-          items: [
-            { text: '基础知识', link: '/frontend/HTML/' },
-            { text: '标签', link: '/frontend/HTML/标签' },
-            { text: '布局', link: '/frontend/HTML/布局' },
-          ],
-        },
-      ],
+      '/frontend/HTML/': frontendHTML(),
+      '/frontend/CSS/':frontendCSS()
     },
   },
 }
-
-// function getSidebar() {
-//     return [
-//         {
-//             text:'HTML',
-//             items: [
-//                 { text: '基础', link: '/HTML/' },
-//                 { text: '标签', link: '/HTML/标签' },
-//             ],
-//             // sidebarDepth:3
-//         },
-//         {
-//             text:'CSS',
-//             items:[
-//                 { text: '基础', link: '/CSS/' },
-//                 { text: '进阶', link: '/CSS/advanced' },
-//             ]
-//         },
-//         {
-//           text:'Javascript',
-//           items:[
-//             { text: '基础', link: '/Javascript/' },
-//             { text: '进阶', link: '/Javascript/advanced' },
-//             { text: '进阶', link: '/Javascript/nightmare' },
-//           ]
-//         },
-//         {
-//           text:'Vue',
-//           items:[
-//             { text: '基础', link: '/Vue/' },
-//             { text: '进阶', link: '/Vue/advanced' },
-//           ]
-//         },
-//         {
-//           text:'浏览器',
-//           items:[
-//             { text: '基础', link: '/Vue/' },
-//             { text: '进阶', link: '/Vue/advanced' },
-//           ]
-//         },
-//         {
-//           text:'网络',
-//           items:[
-//             { text: '基础', link: '/Network/' },
-//             { text: '进阶', link: '/Network/advanced' },
-//           ]
-//         },
-//         {
-//           text:'安全',
-//           items:[
-//             { text: '基础', link: '/Security/' },
-//             { text: '进阶', link: '/Security/advanced' },
-//           ]
-//         },
-//         {
-//           text:'面经',
-//           items:[
-//             { text: '基础', link: '/Experience/' },
-//             { text: '进阶', link: '/Experience/advanced' },
-//           ]
-//         },
-//     ]
-// }
