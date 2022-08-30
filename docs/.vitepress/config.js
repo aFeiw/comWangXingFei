@@ -63,6 +63,26 @@ module.exports = {
             text: 'JavaScript',
             link: '/frontend/Javascript/',
           },
+          {
+            text: 'Node',
+            link: '/frontend/Node/',
+          },
+          {
+            text: 'Vue2',
+            link: '/frontend/Vue2/',
+          },
+          {
+            text: 'Vue3',
+            link: '/frontend/Vue3/',
+          },
+          {
+            text: 'React',
+            link: '/frontend/React/',
+          },
+          {
+            text: 'Webpack',
+            link: '/frontend/Webpack/',
+          },
         ],
       },
       { text: '后端', link: '/https://www.jianshu.com/' },
