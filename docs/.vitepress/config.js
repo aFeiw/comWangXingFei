@@ -133,11 +133,11 @@ module.exports = {
             items: [
               {
                 text: 'linx',
-                link: '/',
+                link: '/personal/start/',
               },
               {
                 text: 'git',
-                link: '/',
+                link: '/personal/start/',
               },
             ],
           },

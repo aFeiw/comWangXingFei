@@ -1,50 +1,191 @@
-# 300ms点击延迟
-移动端的`300ms`点击延迟是因为移动端可以进行双击缩放的操作，因此浏览器在`click`之后要等待`300ms`，看用户有没有下一次点击，也就是判断这次操作是单击还是双击。如果通过监听`touchstart`事件来替代`click`事件的话，会导致一些问题：`touchstart`是手指触摸屏幕就触发，有时候用户只是想滑动屏幕，却触发了`touchstart`事件；当页面上有两个元素`A`和`B`，`A`元素在`B`元素上重叠放置，如果`A`元素的`touchstart`事件绑定的回调函数是隐藏`A`元素自身，那么当点击`A`元素后`A`元素会消失，事件的触发顺序是`touchstart -> touchend -> click`，如果在`300ms`内没有第二次点击便会触发`click`事件，此时由于`A`元素消失，那么`click`事件便落到了`B`元素上，如果`B`元素是个链接或者绑定了`click`事件，那么`B`元素的默认行为或者是绑定的事件回调便会意外地触发，这就是点击穿透问题，解决这个问题还是需要解决`click`事件的`300ms`延迟问题。
+# 常见的兼容性问题
+浏览器有着大量不同的版本，不同种类的浏览器的内核也不尽相同，所以不同浏览器对代码的解析会存在差异，这就导致对页面渲染效果不统一的问题。
 
-## 解决方案
-
-### 禁止缩放
-通过完全禁止缩放来使双击缩放的功能失效，此时浏览器就可以禁用默认的双击缩放行为并且去掉`300ms`点击延迟，但是在这种情况下双指缩放的功能也会失效。
-
-```html
-<meta name="viewport" content="user-scalable=no">
-<!-- 或 -->
-<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
-```
-
-### 更改默认的视口宽度
-浏览器在包含`width=device-width`也就是视口宽度`=`设备宽度或者设置为比`viewport`值更小的页面上禁用双击缩放行为，没有双击缩放就没有`300ms`点击延迟，这种方案没有完全禁用缩放，而是禁用浏览器默认的双击缩放行为，用户仍然可以通过双指缩放操作来缩放页面。
-
-```html
-<meta name="viewport" content="width=device-width">
-```
-
-### touch-action
-`CSS`的`touch-action`属性用于设置触摸屏用户如何操纵元素的区域，它允许移除特定元素或整个文档的触发延迟，而无需禁用缩放。
+## 初始化样式
+因浏览器兼容的问题，不同的浏览器对标签的默认样式值不同，如果不初始化会造成不同浏览器之间的显示差异，布局出现错乱，所以要初始化样式，达到统一的布局。  
+最粗暴的方案就是使用`*`初始化样式，但是其会对于所有的标签加载样式以及计算样式优先级，可能会对性能有所影响。
 
 ```css
-touch-action：none;
-/* 浏览器兼容性 https://caniuse.com/#search=touch-action */
+* { 
+    margin: 0;
+    padding: 0;
+}
+```
+通常使用`Normalize.css`抹平默认样式差异，当然也可以根据样式定制自己的`reset.css`。
+
+```html
+<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
 ```
 
-### FastClick 
-`FastClick`是`FT Labs`专门为解决移动端浏览器`300ms`点击延迟问题所开发的一个轻量级的库。
+## 内核样式兼容
+在`CSS3`标准还未确定时，部分浏览器已经根据最初草案实现了部分功能，为了与之后确定下来的标准进行兼容，所以每种浏览器使用了自己的私有前缀与标准进行区分，当标准确立后，各大浏览器将逐步支持不带前缀的`CSS3`新属性，目前已有很多私有前缀可以不写了，但为了兼容老版本的浏览器，可以仍沿用私有前缀和标准方法，逐渐过渡。
+
+
+|内核| 代表浏览器 | 前缀 |
+| --- | --- | --- |
+| Trident | IE浏览器 | -ms |
+| Gecko | Firefox | -moz |
+| Presto | Opera | -o |
+| Webkit | Chrome、Safari | -webkit |
+
+## 透明属性
+用来设定元素透明度的`opacity`是`CSS 3`里的一个属性，现代浏览器都已经支持，对于老版本浏览器可以通过加入私有前缀来支持，对于`IE6-IE8`可以通过`filter`属性来支持，`IE4-IE9`都可以通过滤镜写法提供兼容支持。
+
+```css
+opacity: 0.5;
+-moz-opacity:0.5;
+filter: alpha(opacity = 50); //IE6-IE8
+filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50); //IE4-IE9
+```
+
+## 媒体查询
+对于`IE9`以下浏览器不支持`CSS3`媒体查询的问题，通常使用`respond.js`来作为兼容性解决方案。
+
+```html
+<script type="text/javascript" src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+```
+
+## HTML5标签
+对于`IE9`以下浏览器不支持`HTML5`新标签的问题，可以使用`document.createElement`创建元素并设置其`CSS`样式即可，通常使用`html5shiv.js`来作为兼容性解决方案。
+
+```html
+<script>
+    document.createElement('header');
+</script>
+<style>
+    header{display: block;}
+</style>
+```
+
+```html
+<script type="text/javascript" src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+```
+
+## placeholder兼容性
+`placeholder`是`html5`新增的一个属性，当`input`或者`textarea`设置了该属性后，该值的内容将作为灰字提示显示在文本框中，当文本框获得焦点或输入内容时，提示文字消失。对于其兼容性首先需要判断`input`是否支持`placeholder`，然后在不支持的情况下可以通过`input`的`onfocus`与`onblur`事件监听来实现`placeholder`效果。
+
+
+```html
+<!-- 简单示例 -->
+<input type="text" value="Tips" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Tips';}">
+```
+
+## 事件监听句柄
+在`IE9`之前，必须使用`attachEvent`而不是使用标准方法`addEventListener`来注册元素的监听器，事件兼容的问题，通常需要会封装一个适配器的方法，过滤事件句柄绑定、移除。
 
 ```javascript
-document.addEventListener('DOMContentLoaded', function() {
-    FastClick.attach(document.body);
-}, false);
-// https://github.com/ftlabs/fastclick
+ var handler = {}
+
+ //绑定事件
+ handler.on = function(target, type, handler) {
+    if(target.addEventListener) {
+        target.addEventListener(type, handler, false);
+    } else {
+        target.attachEvent("on" + type,
+            function(event) {
+                return handler.call(target, event);
+            }, false);
+    }
+ };
+
+ //取消事件监听
+ handler.remove = function(target, type, handler) {
+    if(target.removeEventListener) {
+        target.removeEventListener(type, handler);
+    } else {
+        target.detachEvent("on" + type,
+        function(event) {
+            return handler.call(target, event);
+        }, true);
+     }
+ };
+
 ```
 
+## 阻止默认行为
+`W3C`推荐的阻止默认行为的方式是`event.preventDefault()`，此方法只会阻止默认行为而不会阻止事件的传播。`IE9`之前的浏览器阻止默认行为需要使用`window.event.returnValue = false`。直接在事件处理函数中`return false`也能阻止默认行为，只在`DOM0`级模型中有效。此外，在`jQuery`中使用`return false`会同时阻止默认行为与事件传播，通常也会封装一个方法来实现默认行为的阻止。
 
+```javascript
+handler.preventDefault = function(event) {
+    event = event || window.event;
+    if (event.preventDefault) {
+        event.preventDefault();
+    } else {
+        event.returnValue = false;
+    }
+}
+```
+
+## 阻止事件冒泡
+`W3C`推荐的阻止冒泡的方法是`event.stopPropagation()`，`IE9`之前则是使用`window.event.cancelBubble = true;`，通常也会封装一个方法来实现阻止事件冒泡。
+
+```javascript
+handler.stopPropagation = function(event) {
+    event = event || window.event;
+    if (event.stopPropagation) {
+        event.stopPropagation();
+    } else {
+        event.cancelBubble = false;
+    }
+}
+```
+
+## 滚动高度
+获取窗口的滚动高度`scrollTop`需要采用兼容性写法，即使声明`<DOCTYPE>`浏览器对于文档的处理也会有所不同。
+
+```javascript
+var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+```
+
+## 日期时间
+使用`new Date()`构造函数生成日期时间对象，对于`new Date("2020-06-29")`语法在一些早期的浏览器会输出`invalid date`，这主要是因为早期浏览器不支持表达日期的`-`，而`/`才是被广泛支持的，所以在处理早期浏览器的兼容性时需要将`-`替换为`/`。
+
+```javascript
+new Date("2020-06-29".replace(/-/g, "/"));
+```
+
+## IE条件注释
+`IE`专门提供的一种语法，只有IE能识别运行，其他浏览器只会作为注解。
+
+```html
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+```
+
+```html
+<!--[if !IE]>  除IE外都可识别   <![endif]-->
+<!--[if IE]>   所有的IE可识别   <![endif]-->
+<!--[if IE 6]>   仅IE6可识别   <![endif]-->
+<!--[if lt IE 6]>   IE6以及IE6以下版本可识别   <![endif]-->
+<!--[if gte IE 6]>   IE6以及IE6以上版本可识别   <![endif]-->
+<!--[if IE 7]>   仅IE7可识别   <![endif]-->
+<!--[if lt IE 7]>   IE7以及IE7以下版本可识别   <![endif]-->
+<!--[if gte IE 7]>   IE7以及IE7以上版本可识别   <![endif]-->
+<!--[if IE 8]>   仅IE8可识别   <![endif]-->
+<!--[if IE 9]>   仅IE9可识别   <![endif]-->
+```
+
+```html
+<!-- 
+    ! NOT运算符
+    lt 小于运算符
+    lte 小于或等于运算符
+    gt 大于运算符
+    gte 大于或等于运算符
+    & AND运算符
+    | OR运算符
+    () 子表达式运算符 用于与布尔运算符创建更复杂的表达式
+-->
+```
 
 
 
 ## 参考
 
 ```
-https://www.cnblogs.com/shytong/p/5463673.html
-https://www.cnblogs.com/shiyou00/p/10410935.html
-https://blog.csdn.net/qq_41047322/article/details/81287325
+https://www.jianshu.com/p/c0b758a88c7c
+https://juejin.im/post/5b3da006e51d4518f140edb2
+https://juejin.im/post/59a3f2fe6fb9a0249471cbb4
 ```

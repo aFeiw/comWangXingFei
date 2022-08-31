@@ -5,7 +5,7 @@ export function frontendHTML() {
       collapsible: true,
       text: '第一章',
       items: [
-        { text: '300ms延迟问题', link: '/frontend/HTML/' },
+        { text: '浏览器兼容性', link: '/frontend/HTML/' },
         { text: '常见的兼容性问题', link: '/frontend/HTML/常见的兼容性问题' },
         { text: '可替换元素和非替换元素', link: '/frontend/HTML/可替换元素和非替换元素' },
         { text: '蒙层禁止页面滚动的方案', link: '/frontend/HTML/蒙层禁止页面滚动的方案' },
