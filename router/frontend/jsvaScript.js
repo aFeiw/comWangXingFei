@@ -66,7 +66,7 @@ export function frontendJavascript() {
                 { text: 'Js数组操作', link: '/frontend/JavaScript/Js数组操作' },
                 { text: 'Js文件异步加载', link: '/frontend/JavaScript/Js文件异步加载' },
                 { text: 'Js严格模式', link: '/frontend/JavaScript/Js严格模式' },
-                { text: 'Js中==与===', link: '/frontend/JavaScript/Js中==与===' },
+                { text: 'Js中==与===', link: '/frontend/JavaScript/Js中全等' },
                 { text: 'Js中的堆栈', link: '/frontend/JavaScript/Js中的堆栈' },
                 { text: 'Js中的逻辑运算符', link: '/frontend/JavaScript/Js中的逻辑运算符' },
                 { text: 'Js中的位操作符', link: '/frontend/JavaScript/Js中的位操作符' },

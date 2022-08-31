@@ -37,7 +37,7 @@ module.exports = {
 
 ## 3.1\_打包流程图
 
-![image-20210421125257233](../../../images/image-20210421125257233.png)
+![image-20210421125257233](../images/image-20210421125257233.png)
 
 ==重点: 所有要被打包的资源都要跟入口产生直接/间接的引用关系==
 
@@ -57,7 +57,7 @@ module.exports = {
    yarn add jquery
    ```
 
-   ![image-20210208100817930](../../../images/image-20210208100817930.png)
+   ![image-20210208100817930](../images/image-20210208100817930.png)
 
 3. index.html 准备一些 li
 
@@ -112,7 +112,7 @@ module.exports = {
 
 7. 可以在 dist 下把 public/index.html 引入过来
 
-   ![image-20210421125602484](../../images/image-20210421125602484.png)
+   ![image-20210421125602484](../images/image-20210421125602484.png)
 
    在 index.html 中==手动==引入 js
 
@@ -308,7 +308,7 @@ module.exports = {
 
   - 我们可以在上面的网站中查询一些添加 css 属性的样式；
 
-    <img src="../../images/image-20220710172119810.png" alt="image-20220710172119810" style="zoom: 67%;" />
+    <img src="../images/image-20220710172119810.png" alt="image-20220710172119810" style="zoom: 67%;" />
 
 ### 3.7.1 插件 autoprefixer
 
@@ -326,7 +326,7 @@ module.exports = {
 
 - 转化之后的 css 样式如下：
 
-  <img src="../../images/image-20220710172419130.png" alt="image-20220710172419130" style="zoom:67%;" />
+  <img src="../images/image-20220710172419130.png" alt="image-20220710172419130" style="zoom:67%;" />
 
 ### 3.7.2 postcss-loader
 
@@ -343,7 +343,7 @@ module.exports = {
 - 我们修改加载 css 的 loader：（配置文件已经过多，给出一部分了）
 
   - 注意：因为 postcss 需要有对应的插件才会起效果，所以我们需要配置它的- plugin；
-  - <img src="../../images/image-20220710172914764.png" alt="image-20220710172914764" style="zoom:67%;" />
+  - <img src="../images/image-20220710172914764.png" alt="image-20220710172914764" style="zoom:67%;" />
 
 **单独的 PostCss 配置文件**
 

@@ -43,7 +43,7 @@ export function frontendHTML() {
       text: '第三章',
       items: [
         { text: 'LocalStorage与SessionStorage', link: '/frontend/HTML/LocalStorage与SessionStorage' },
-        { text: 'Service Worker的应用', link: '/frontend/HTML/Worker的应用' },
+        { text: 'Service Worker的应用', link: '/frontend/HTML/Service Worker的应用' },
         { text: 'Shadow DOM的理解', link: '/frontend/HTML/Shadow DOM的理解' },
         { text: 'Web Worker', link: '/frontend/HTML/Web Worker' },
 

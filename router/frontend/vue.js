@@ -33,8 +33,8 @@ export function frontendVue() {
         { text: 'Vue首屏性能优化组件', link: '/frontend/Vue/Vue首屏性能优化组件' },
         { text: 'Vue数据双向绑定', link: '/frontend/Vue/Vue数据双向绑定' },
         { text: 'Vue为何采用异步渲染', link: '/frontend/Vue/Vue为何采用异步渲染' },
-        { text: 'Vue中$nextTick的理解', link: '/frontend/Vue/Vue中$nextTick的理解' },
-        { text: 'Vue中$refs的理解', link: '/frontend/Vue/Vue中$refs的理解' },
+        { text: 'Vue中$nextTick的理解', link: '/frontend/Vue/Vue中nextTick的理解' },
+        { text: 'Vue中$refs的理解', link: '/frontend/Vue/Vue中refs的理解' },
 
  
       ],

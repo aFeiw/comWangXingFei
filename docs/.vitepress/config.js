@@ -23,7 +23,7 @@ module.exports = {
   description: 'Vite & Vue powered static site generator.',
   appearance: true,
   //配置
-  base: '/docs/',
+  base: '/comWangXingFei/',
   lang: 'zh-CN',
   lastUpdated: true,
   markdown: {
