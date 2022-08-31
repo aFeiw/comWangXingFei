@@ -159,7 +159,7 @@ module.exports = {
           },
         ],
       },
-      { text: '插件扩展', link: '/https://www.jianshu.com/' },
+      { text: '插件扩展', link: '/personal/start' },
       { text: '简书', link: 'https://www.jianshu.com/' },
     ],
     sidebar: {
