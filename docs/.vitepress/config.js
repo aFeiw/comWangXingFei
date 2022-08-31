@@ -145,5 +145,9 @@ module.exports = {
       '/toolSoftware/Vuex/': vueX(),
       '/toolSoftware/Pinia/': pinia(),
     },
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022-present fql'
+    },
   },
 }
