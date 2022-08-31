@@ -333,11 +333,7 @@ static constexpr int kMaxValue = kSmiMaxValue;
 static constexpr intptr_t kSmiMaxValue = -(kSmiMinValue + 1);
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

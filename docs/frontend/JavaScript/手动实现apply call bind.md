@@ -77,11 +77,7 @@ var _bindFunct = funct._bind(obj, 1, 2); // 绑定对象
 _bindFunct(); // 2 1 2 
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

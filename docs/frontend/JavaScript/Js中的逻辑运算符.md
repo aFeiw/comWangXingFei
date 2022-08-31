@@ -117,11 +117,7 @@ console.log(!!Boolean(false));         // false // 调用构造函数生成字�
 
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

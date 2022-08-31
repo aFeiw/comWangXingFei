@@ -93,11 +93,7 @@ XSS https://github.com/WindrunnerMax/EveryDay/blob/master/Browser/XSS%E8%B7%A8%E
 Cookie与Session https://github.com/WindrunnerMax/EveryDay/blob/master/HTML/Cookie%E4%B8%8ESession.md
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 
 ## 参考

@@ -638,11 +638,7 @@ arr.sort( (v1, v2) => {
 console.log(arr);
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

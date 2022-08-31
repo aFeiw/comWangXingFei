@@ -64,8 +64,3 @@ obj.x = 11;
 console.log(obj.x); // 11
 ```
 
-## 每日一题
-
-```
-https://github.com/WindrunnerMax/EveryDay
-```

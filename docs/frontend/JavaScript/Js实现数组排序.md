@@ -176,8 +176,4 @@ console.log(arr); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 // 平均时间复杂度 O(nlogn) 最好情况 O(nlogn) 最坏情况 O(nlogn) 空间复杂度 O(n) 稳定排序
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

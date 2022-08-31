@@ -104,11 +104,7 @@ window.fetch("https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js")
 
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

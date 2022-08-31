@@ -58,8 +58,4 @@ abort()
     ajax("https://www.baidu.com","POST","A=1&B=2");
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

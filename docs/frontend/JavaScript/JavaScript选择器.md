@@ -175,11 +175,7 @@ JS选择器常用的有`getElementById()`、`getElementsByClassName()`、`getEle
 </html>
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

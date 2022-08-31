@@ -34,11 +34,7 @@ console.log(null === undefined); // false
     * 函数没有返回值，默认返回`undefined`。
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

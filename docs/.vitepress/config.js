@@ -2,10 +2,12 @@
 import { frontendHTML } from '../../router/frontend/html'
 //引入css侧边栏导航配置
 import { frontendCSS } from '../../router/frontend/css'
+//引入js侧边栏导航配置
+import { frontendJavascript } from '../../router/frontend/jsvaScript'
+//引入ts侧边栏导航配置
+import { frontendTypescript } from '../../router/frontend/typescript'
 //引入vue侧边栏导航配置
 import { frontendVue2 } from '../../router/frontend/vue2'
-//引入typeScript侧边栏导航配置
-import { frontendTypescript } from '../../router/frontend/typescript'
 //引入Webpack侧边栏导航配置
 import { frontendWebpack } from '../../router/frontend/Webpack'
 //引入工具软件栏目侧边栏导航配置
@@ -78,7 +80,7 @@ module.exports = {
               },
               {
                 text: 'JavaScript',
-                link: '/frontend/Javascript/',
+                link: '/frontend/JavaScript/',
               },
               {
                 text: 'TypeScript',
@@ -137,6 +139,7 @@ module.exports = {
     sidebar: {
       '/frontend/HTML/': frontendHTML(),
       '/frontend/CSS/': frontendCSS(),
+      '/frontend/JavaScript/':frontendJavascript(),
       '/frontend/Vue2/': frontendVue2(),
       '/frontend/Vue3/': frontendVue2(),
       '/frontend/Typescript/': frontendTypescript(),

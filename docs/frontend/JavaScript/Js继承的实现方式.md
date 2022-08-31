@@ -226,11 +226,7 @@ console.log(child.from); // child
 * 相对比较复杂。
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 
 ## 参考

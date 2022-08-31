@@ -329,11 +329,7 @@ console.log(Math.trunc(1.1)); // 1
 ```
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

@@ -182,11 +182,7 @@ process.memoryUsage(); // heapUsed约2M 内存已回收
 console.log(s); // Set(0) {}
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

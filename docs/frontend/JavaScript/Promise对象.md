@@ -227,11 +227,7 @@ ajax("GET","https://www.baidu.com",[]).then((res) => {
 })
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 
 ## 参考

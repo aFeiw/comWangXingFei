@@ -62,8 +62,4 @@ var convertThis = rollCall.sayAllName.bind(window,"A","B","C");
 convertThis(); // Teacher A B C
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

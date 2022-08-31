@@ -533,11 +533,7 @@ console.log(date[Symbol.toPrimitive]("string")); // Sun Oct 18 2020 10:15:30 GMT
 ```
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

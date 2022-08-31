@@ -372,8 +372,4 @@ function unionLinkList(L1, L2){
 })();
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

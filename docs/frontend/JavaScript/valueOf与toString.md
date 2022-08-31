@@ -125,11 +125,7 @@ console.log(v == 10); // valueOf // true // 只有在==的情况下才有可能�
 ```
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 
