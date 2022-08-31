@@ -22,11 +22,7 @@
 * `XHTML`可以混合各种`XML`应用，比如`MathML`、`SVG`。
 * `HTML4.0`不能混合其它`XML`应用，但在`HTML5`中已可以嵌入`MathML`、`SVG`等应用。
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

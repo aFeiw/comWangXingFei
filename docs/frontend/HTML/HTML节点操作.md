@@ -211,8 +211,4 @@
 </html>
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

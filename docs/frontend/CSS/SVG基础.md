@@ -42,11 +42,7 @@
 ### 浏览器支持
 现代浏览器都支持`svg`，早期的`IE8`及以前版本需要安装插件
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 
 ## 参考

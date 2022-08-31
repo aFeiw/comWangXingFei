@@ -73,11 +73,7 @@
 ### display: table-caption
 `display: table-caption;`是`CSS2`规范，兼容性良好，该属性值表示此元素会作为一个表格标题显示，类似于`<caption>`。
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

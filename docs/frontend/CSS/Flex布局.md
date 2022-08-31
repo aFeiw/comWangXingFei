@@ -407,8 +407,4 @@ http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 </html>
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

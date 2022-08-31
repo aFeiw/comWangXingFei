@@ -156,8 +156,4 @@ css3提供`calc`函数，能够进行动态计算。
 </html>
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

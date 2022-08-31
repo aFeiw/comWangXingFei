@@ -71,8 +71,4 @@
 `<acronym>`、`<applet>`、`<basefont>`、`<bgsound>`、`<big>`、`<blink>`、`<center>`、`<command>`、`<content>`、`<dir>`、`<element>`、`<font>`、`<frame>`、`<frameset>`、`<image>`、`<isindex>`、`<keygen>`、`<listing>`、`<marquee>`、`<menuitem>`、`<multicol>`、`<nextid>`、`<nobr>`、`<noembed>`、`<noframes>`、`<plaintext>`、`<shadow>`、`<spacer>`、`<strike>`、`<tt>`、`<xmp>`。
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```

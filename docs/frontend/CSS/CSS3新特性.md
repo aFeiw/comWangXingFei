@@ -476,11 +476,7 @@ https://github.com/WindrunnerMax/EveryDay/blob/master/CSS/Grid布局.md
 </html>
 ```
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 
