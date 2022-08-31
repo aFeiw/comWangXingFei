@@ -12,10 +12,10 @@ import { frontendVue } from '../../router/frontend/vue'
 import { frontendReact } from '../../router/frontend/react'
 //引入Webpack侧边栏导航配置
 import { frontendWebpack } from '../../router/frontend/Webpack'
-//引入工具软件栏目侧边栏导航配置
-import { vueRouter } from '../../router/toolSoftware/vueRouter'
-import { vueX } from '../../router/toolSoftware/vueX'
-import { pinia } from '../../router/toolSoftware/pinia'
+//引入vue其他栏目侧边栏导航配置
+import { vueRouter } from '../../router/frontend/vueRouter'
+import { vueX } from '../../router/frontend/vueX'
+import { pinia } from '../../router/frontend/pinia'
 //
 module.exports = {
   title: 'WangXingFei',
@@ -106,6 +106,22 @@ module.exports = {
             text: 'Webpack',
             link: '/frontend/Webpack/basic',
           },
+          {
+            items: [
+              {
+                text: 'Vue-Router',
+                link: '/frontend/VueRouter/',
+              },
+              {
+                text: 'Vuex',
+                link: '/frontend/Vuex/',
+              },
+              {
+                text: 'Pinia',
+                link: '/frontend/Pinia/',
+              },
+            ],
+          },
         ],
       },
       { text: '后端', link: '/https://www.jianshu.com/' },
@@ -116,16 +132,12 @@ module.exports = {
           {
             items: [
               {
-                text: 'Vue-Router',
-                link: '/toolSoftware/VueRouter/',
+                text: 'linx',
+                link: '/',
               },
               {
-                text: 'Vuex',
-                link: '/toolSoftware/Vuex/',
-              },
-              {
-                text: 'Pinia',
-                link: '/toolSoftware/Pinia/',
+                text: 'git',
+                link: '/',
               },
             ],
           },
@@ -142,9 +154,9 @@ module.exports = {
       '/frontend/React/':frontendReact(),
       '/frontend/Typescript/': frontendTypescript(),
       '/frontend/Webpack/': frontendWebpack(),
-      '/toolSoftware/VueRouter/': vueRouter(),
-      '/toolSoftware/Vuex/': vueX(),
-      '/toolSoftware/Pinia/': pinia(),
+      '/frontend/VueRouter/': vueRouter(),
+      '/frontend/Vuex/': vueX(),
+      '/frontend/Pinia/': pinia(),
     },
     footer: {
       message: 'Released under the MIT License.',
