@@ -41,7 +41,7 @@ createApp(Counter).mount('#app')
 以下是一个表示“单向数据流”理念的简单示意：
 
 
-![flow](images/flow.png)
+![flow](../../images/flow.png)
 
 但是，当我们的应用遇到**多个组件共享状态**时，单向数据流的简洁性很容易被破坏：
 
@@ -72,7 +72,7 @@ createApp(Counter).mount('#app')
 
 - 这就是Vuex背后的基本思想，它借鉴了Flux、Redux、Elm（纯函数语言，redux有借鉴它的思想）：
 
-![vuex](images/vuex.png)
+![vuex](../../images/vuex.png)
 
 
 
