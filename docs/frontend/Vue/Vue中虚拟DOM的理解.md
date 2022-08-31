@@ -90,11 +90,7 @@ vnode = createComponent(tag, data, context, children)
 简单来说建立`Virtual DOM`的目的是减少对于整个`DOM`的操作，通过建立`Virtual DOM`来追踪如何改变真实`DOM`，从而实现更高效地更新节点。  
 使用`Virtual DOM`同样也是有部分缺点，代码更多，体积更大，内存占用增大，对于小量的单一的`DOM`修改使用虚拟`DOM`成本反而更高，但是整体来说，使用`Virtual DOM`是优点远大于缺点的。
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

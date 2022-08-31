@@ -24,11 +24,7 @@
 * 性能消耗: `v-if`有更高的切换消耗，`v-show`有更高的初始渲染消耗。
 * 使用场景: `v-if`适合条件不太可能改变的情况，`v-show`适合条件频繁切换的情况。
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

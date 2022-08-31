@@ -283,11 +283,7 @@ DOM Node:  b f g
 `diff`完成之后便是将`new VNode`作为`old VNode`以便下次`diff`时使用，此外关于组件的`diff`，组件级别的`diff`算法比较简单，节点不相同就进行创建和替换，节点相同的话就会对其子节点进行更新，最后关于调用`createElm`来根据`VNode`创建真实的`DOM`元素，如果是一个组件，那么 `createComponent`会返回`true`，因此不会进行接下来的操作，如果不是组件，会进行节点创建工作，并会递归对孩子创建节点。
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

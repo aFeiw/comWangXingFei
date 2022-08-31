@@ -31,11 +31,7 @@
 * `$route.name`: 如果存在当前路由名称则返回当前路由的名称。
 * `$route.redirectedFrom`: 如果存在重定向，即为重定向来源的路由的名字。
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

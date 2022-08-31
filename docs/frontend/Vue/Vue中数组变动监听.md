@@ -190,11 +190,7 @@ console.log(target); // [11, 2, 3]
 
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 
