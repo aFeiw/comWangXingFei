@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习 →
-      link: /personal/start/
+      link: /frontend/HTML/
     - theme: alt
       text: 了解作者 ⭐️
       link: https://github.com/vuejs/vitepress

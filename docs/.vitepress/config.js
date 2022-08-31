@@ -124,7 +124,23 @@ module.exports = {
           },
         ],
       },
-      { text: '后端', link: '/https://www.jianshu.com/' },
+      { text: '后端', 
+      activeMatch: '/backend/',
+      items: [
+        {
+          items: [
+            {
+              text: 'JavaSE',
+              link: '/backend/JavaSE/',
+            },
+            {
+              text: 'Maven',
+              link: '/backend/Maven/',
+            },
+          ],
+        },
+        ],
+     },
       {
         text: '工具软件',
         activeMatch: '/toolSoftware/',
@@ -133,11 +149,11 @@ module.exports = {
             items: [
               {
                 text: 'linx',
-                link: '/personal/start/',
+                link: '/personal/start',
               },
               {
                 text: 'git',
-                link: '/personal/start/',
+                link: '/personal/start',
               },
             ],
           },
