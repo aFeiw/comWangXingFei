@@ -120,3 +120,18 @@ aside.VPSidebar::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
+:root {
+  --vp-c-brand: #0886DE;
+  --vp-button-brand-border:#6BB6EB;
+  --vp-button-brand-bg: #0886DE;
+  --vp-c-brand-dark: #399EE5;
+}
+
+p > img {
+  @apply border
+}
+
+/* Empty lines are not rendered without this tweak. */
+pre code span.line:not(:last-child) {
+  min-height: 1.5rem;
+}
