@@ -94,11 +94,7 @@ export default function App() {
 * 组件渲染后呈现到屏幕上。
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

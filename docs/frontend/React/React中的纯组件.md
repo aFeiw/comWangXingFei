@@ -53,11 +53,7 @@ pureComponentPrototype.isPureReactComponent = true;
 * `shouldComponentUpdate`中的`shadow diff`同样消耗性能。
 * 需要确保组件渲染仅取决于`props`与`state`。
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

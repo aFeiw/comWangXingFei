@@ -8,6 +8,8 @@ import { frontendJavascript } from '../../router/frontend/jsvaScript'
 import { frontendTypescript } from '../../router/frontend/typescript'
 //引入vue侧边栏导航配置
 import { frontendVue } from '../../router/frontend/vue'
+//引入React侧边栏导航配置
+import { frontendReact } from '../../router/frontend/react'
 //引入Webpack侧边栏导航配置
 import { frontendWebpack } from '../../router/frontend/Webpack'
 //引入工具软件栏目侧边栏导航配置
@@ -137,6 +139,7 @@ module.exports = {
       '/frontend/CSS/': frontendCSS(),
       '/frontend/JavaScript/':frontendJavascript(),
       '/frontend/Vue/': frontendVue(),
+      '/frontend/React/':frontendReact(),
       '/frontend/Typescript/': frontendTypescript(),
       '/frontend/Webpack/': frontendWebpack(),
       '/toolSoftware/VueRouter/': vueRouter(),

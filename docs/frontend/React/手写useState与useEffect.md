@@ -359,11 +359,7 @@ export default function App() {
 
 当我们切换`use-update-effect-ref`与`use-update-effect-var`的`useUpdateEffect`时，我们会发现当刷新页面时使用`use-update-effect-ref`将不会有值打印，而`use-update-effect-var`则会打印`count2 -> effect 0`，而在点击`Count1++`或者`Count2++`的效果都是正常的，说明`use-update-effect-ref`是能够我们想要的`useUpdateEffect`功能，而`use-update-effect-var`却因为变量值共享的问题而无法正确实现功能，当然我们也可以通过类似于数组的方式来解决这个问题，但是再具体到各个组件之间的共享上面，我们就无法在在类似于`Hooks`语法的基础上来实现了，必须手动注册一个闭包来完成类似的功能，而且类似于`useState`在`set`时刷新本组件以及子组件的方式，就必须借助`useState`来实现了。
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

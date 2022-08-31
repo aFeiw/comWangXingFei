@@ -526,11 +526,7 @@ ReactDOM.render(
 
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

@@ -75,11 +75,7 @@ function MyComponent() {
 关于`useMemo`与`useCallback`是否值得尽量多用，私认为并不应该这么做，如果在性能优化方面非常有效，值得在每个依赖或者函数都值得使用`useMemo`与`useCallback`的话，`React`可以干脆将其作为默认的功能，又可以减少用户使用`Hooks`的心智负担，又可以减少使用`Hooks`的包裹让代码更加简洁，可是`React`并没有这么做，实际上这仍然是一个权衡的问题，权衡性能优化的点，取一个折衷，具体来说就是你需要评估你组件`re-render` 的次数和代价，`React.memo`、`useMemo`与`useCallback`这些缓存机制也是有代价的，需要做好平衡，不能盲目的多用这类缓存优化方案，比起盲目的进行各种细微的优化，分析清楚性能问题出现的原因才能真正的解决问题。
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 

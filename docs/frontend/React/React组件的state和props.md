@@ -237,11 +237,7 @@ this.setState({ tips: "data update" }, () => console.log("finished"));
 
 
 
-## 每日一题
 
-```
-https://github.com/WindrunnerMax/EveryDay
-```
 
 ## 参考
 
