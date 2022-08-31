@@ -3,19 +3,19 @@ export function frontendTypescript() {
     {
       items: [
         {
-          text: 'typescript的快速上手',
+          text: '快速上手',
           link: '/frontend/Typescript/get-started-quickly',
         },
         {
-          text: 'typescript声明变量',
+          text: '声明变量',
           link: '/frontend/Typescript/declare-variables',
         },
         {
-          text: 'typescript常用基础类型',
+          text: '常用基础类型',
           link: '/frontend/Typescript/common-foundation-types',
         },
         {
-          text: 'typescript高级类型',
+          text: '高级类型',
           link: '/frontend/Typescript/advanced-type',
         },
       ],

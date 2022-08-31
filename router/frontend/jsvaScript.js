@@ -82,6 +82,13 @@ export function frontendJavascript() {
                 { text: 'Js中String对象', link: '/frontend/JavaScript/Js中String对象' },
                 { text: 'Js中Symbol对象', link: '/frontend/JavaScript/Js中Symbol对象' },
                 { text: 'Json Web Token', link: '/frontend/JavaScript/Json Web Token' },
+            ],
+        },
+        {
+            //开启折叠
+            collapsible: true,
+            text: '第四章',
+            items: [
                 { text: 'let与const', link: '/frontend/JavaScript/let与const' },
                 { text: 'Map与WeakMap', link: '/frontend/JavaScript/Map与WeakMap' },
                 { text: 'new运算符', link: '/frontend/JavaScript/new运算符' },

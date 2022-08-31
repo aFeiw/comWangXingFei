@@ -7,7 +7,7 @@ import { frontendJavascript } from '../../router/frontend/jsvaScript'
 //引入ts侧边栏导航配置
 import { frontendTypescript } from '../../router/frontend/typescript'
 //引入vue侧边栏导航配置
-import { frontendVue2 } from '../../router/frontend/vue2'
+import { frontendVue } from '../../router/frontend/vue'
 //引入Webpack侧边栏导航配置
 import { frontendWebpack } from '../../router/frontend/Webpack'
 //引入工具软件栏目侧边栏导航配置
@@ -91,12 +91,8 @@ module.exports = {
           {
             items: [
               {
-                text: 'Vue2',
-                link: '/frontend/Vue2/basicConcepts',
-              },
-              {
-                text: 'Vue3',
-                link: '/frontend/Vue3/basicConcepts',
+                text: 'Vue',
+                link: '/frontend/Vue/',
               },
               {
                 text: 'React',
@@ -140,8 +136,7 @@ module.exports = {
       '/frontend/HTML/': frontendHTML(),
       '/frontend/CSS/': frontendCSS(),
       '/frontend/JavaScript/':frontendJavascript(),
-      '/frontend/Vue2/': frontendVue2(),
-      '/frontend/Vue3/': frontendVue2(),
+      '/frontend/Vue/': frontendVue(),
       '/frontend/Typescript/': frontendTypescript(),
       '/frontend/Webpack/': frontendWebpack(),
       '/toolSoftware/VueRouter/': vueRouter(),
