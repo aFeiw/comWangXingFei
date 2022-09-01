@@ -15,14 +15,16 @@ cd docs/.vitepress/dist
 git init
 
 git add -A
-
+ 
 git commit -m '版本发布'
 
-git push -f https://github.com/pokerboy123 master:releaseBlogs
+git push -f https://github.com/pokerboy123/comWangXingFei.git master:releaseBlog
 
 # # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
 
- rm -f docs/.vitepress/dist
+rm -f docs/.vitepress/dist
+ 
+rm -f docs/node_modules
