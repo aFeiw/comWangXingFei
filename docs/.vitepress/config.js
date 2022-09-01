@@ -16,7 +16,8 @@ import { frontendWebpack } from '../../router/frontend/Webpack'
 import { vueRouter } from '../../router/frontend/vueRouter'
 import { vueX } from '../../router/frontend/vueX'
 import { pinia } from '../../router/frontend/pinia'
-//
+//引入javaSE栏目侧边栏导航配置
+import { backendJavaSE } from "../../router/backend/javaSE"
 module.exports = {
   title: 'WangXingFei',
   titleTemplate: 'wangxingfei Private web site',
@@ -173,6 +174,7 @@ module.exports = {
       '/frontend/VueRouter/': vueRouter(),
       '/frontend/Vuex/': vueX(),
       '/frontend/Pinia/': pinia(),
+      '/backend/JavaSE/':backendJavaSE()
     },
     footer: {
       message: 'Released under the MIT License.',
