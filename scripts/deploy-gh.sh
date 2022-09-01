@@ -25,6 +25,6 @@ git push -f https://github.com/pokerboy123/comWangXingFei.git master:releaseBlog
 
 cd -
 
-rm -f docs/.vitepress/dist
+rm -rf docs/.vitepress/dist
  
-rm -f docs/node_modules
+rm -rf docs/node_modules
