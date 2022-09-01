@@ -80,8 +80,6 @@ public class TestStatic {
 举个简单的例子：
 
 
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200518155532.png)
-
 　　在上面的代码中，由于print2方法是独立于对象存在的，可以直接用过类名调用。假如说可以在静态方法中访问非静态方法/变量的话，那么如果在main方法中有下面一条语句：
 
 　　MyObject.print2();
@@ -142,8 +140,6 @@ class Person{
 ## 3.1.static关键字会改变类中成员的访问权限吗？
 
 　　有些初学的朋友会将java中的static与C/C++中的static关键字的功能混淆了。在这里只需要记住一点：与C/C++中的static不同，Java中的static关键字不会影响到变量或者方法的作用域。在Java中能够影响到访问权限的只有private、public、protected（包括包访问权限）这几个关键字。看下面的例子就明白了：
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200518160541.png)
 
 　提示错误"age是私有的 "，这说明static关键字并不会改变变量和方法的访问权限。
 
@@ -542,8 +538,6 @@ public class Singleton {
 
 　　HashMap Entry：
 
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200518164800.png)
-
 　　builder设计模式：
 
 ```java
@@ -708,14 +702,10 @@ public class Main {
 
 　　这段代码反编译之后的字节码如下：
 
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200518165557.png)
 
 　　从上面可以看出，在调用static方法是调用的是invokestatic指令，而在调用类的构造器时实际上执行的是invokespecial指令，而这2个指令在JVM规范中的解释如下：
 
 　　https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html#jvms-6.5.invokestatic
 
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200518165632.png)
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200518165653.png)
 
 　　可以看出，这2个指令的用途是完全不同的，invokestatic定义很清楚，就是用来调用执行static方法，而invokespecial用来调用实例方法，用来特殊调用父类方法、private方法和类的构造器。

@@ -254,8 +254,6 @@ public class Outter {
 
 编译之后，出现了两个字节码文件：
 
-![img](https://images0.cnblogs.com/i/288799/201407/021630063402064.jpg)
-
 反编译Outter$Inner.class文件得到下面信息：
 
 ```java
@@ -357,15 +355,11 @@ public class Test {
 
 这段代码会被编译成两个class文件：Test.class和Test1.class。默认情况下，编译器会为匿名内部类和局部内部类起名为Outter1.class。默认情况下，编译器会为匿名内部类和局部内部类起名为Outterx.class（x为正整数）。
 
-![img](https://images0.cnblogs.com/i/288799/201407/021900556994393.jpg)
-
 根据上图可知，test方法中的匿名内部类的名字被起为 Test$1。
 
 上段代码中，如果把变量a和b前面的任一个final去掉，这段代码都编译不过。我们先考虑这样一个问题：
 
 当test方法执行完毕之后，变量a的生命周期就结束了，而此时Thread对象的生命周期很可能还没有结束，那么在Thread的run方法中继续访问变量a就变成不可能了，但是又要实现这样的效果，怎么办呢？Java采用了 复制 的手段来解决这个问题。将这段代码的字节码反编译可以得到下面的内容：
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200521140922.png)
 
 我们看到在run方法中有一条指令：
 
@@ -395,7 +389,6 @@ public class Test {
 
 反编译得到：
 
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200521141110.png)
 
 我们看到匿名内部类Test$1的构造器含有两个参数，一个是指向外部类对象的引用，一个是int型变量，很显然，这里是将变量test方法中的形参a以参数的形式传进来对匿名内部类中的拷贝（变量a的拷贝）进行赋值初始化。
 

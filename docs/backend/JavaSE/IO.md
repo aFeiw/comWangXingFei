@@ -20,10 +20,6 @@ Java中I/O操作主要是指使用`java.io`包下的内容，进行输入、输�
 * **字节流** ：以字节为单位，读写数据的流。
 * **字符流** ：以字符为单位，读写数据的流。
 
-## 1.3 IO的流向说明图解
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200619110946.jpg)
-
 ## 1.4 顶级父类们
 
 |            |           **输入流**           |             输出流              |
@@ -409,9 +405,6 @@ e
 
 ## 2.6 字节流练习：图片复制
 
-### 复制原理图解
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200619113223.jpg)
 
 ### 案例实现
 

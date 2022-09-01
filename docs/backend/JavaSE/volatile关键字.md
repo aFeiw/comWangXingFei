@@ -47,7 +47,6 @@ public class VolatileThreadDemo {
 
 结果：
 
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200617091602.png)
 
 我们看到，VolatileThread线程中已经将flag设置为true，但main()方法中始终没有读到，从而没有打印。
 
@@ -59,11 +58,8 @@ Java内存模型(Java Memory Model)描述了Java程序中各种变量(线程共�
 
 所有的共享变量都存储于主内存。这里所说的变量指的是实例变量和类变量。不包含局部变量，因为局部变量是线程私有的，因此不存在竞争问题。每一个线程还存在自己的工作内存，线程的工作内存，保留了被线程使用的变量的工作副本。线程对变量的所有的操作(读，取)都必须在工作内存中完成，而不能直接读写主内存中的变量，不同线程之间也不能直接访问对方工作内存中的变量，线程间变量的值的传递需要通过主内存完成。
 
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200617092043.png)
 
 # 3. 问题分析
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200617092127.png)
 
 1. VolatileThread线程从主内存读取到数据放入其对应的工作内存
 
@@ -113,8 +109,6 @@ Java内存模型(Java Memory Model)描述了Java程序中各种变量(线程共�
 ```
 
    工作原理：
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200617092415.png)
 
 1. VolatileThread线程从主内存读取到数据放入其对应的工作内存
 

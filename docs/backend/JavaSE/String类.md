@@ -1,5 +1,4 @@
 # String的原理
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200622132704.png)
 由`=`创建的String对象,会存放在堆的字符串常量池中
 
 # 比较方法

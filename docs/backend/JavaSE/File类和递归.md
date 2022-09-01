@@ -316,11 +316,6 @@ public class DiGuiDemo {
 	}
 }
 ```
-
-### 代码执行图解
-
-![](https://gitee.com/krislin_zhao/IMGcloud/raw/master/img/20200619105445.jpg)
-
 > 小贴士：递归一定要有条件限定，保证递归能够停止下来，次数不要太多，否则会发生栈内存溢出。
 
 ## 3.递归求阶乘
