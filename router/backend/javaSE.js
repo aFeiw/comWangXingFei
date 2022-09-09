@@ -1,7 +1,7 @@
 export function backendJavaSE() {
     return [
         {
-        //开启折叠
+        //开启折叠.
          collapsible: true,
           text: '基础篇',
           items: [

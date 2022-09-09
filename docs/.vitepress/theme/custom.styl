@@ -63,29 +63,29 @@ a.sidebar-link-item.active{
     display: none;
 }
 a.VPButton.medium.brand {
-    font-weight: 800;
+    font-weight: 800!important;
 }
 a.VPButton.medium.alt{
-  font-weight: 520;
+  font-weight: 520!important;
 }
 .item .VPFeature[data-v-549c013f] {
     border: 1px solid var(--vp-c-bg-soft);
-    border-radius: 12px;
-    padding: 24px;
-    height: 100%;
-    cursor: pointer;
+    border-radius: 12px!important;
+    padding: 24px!important
+    height: 100%!important;
+    cursor: pointer!important;
 }
-.item .VPFeature .icon[data-v-549c013f] {
-    width: 100%;
-    height: 48px;
-    font-size: 24px;
-    background-color:#0886de;
-    color:#fff;
+div.icon {
+    width: 100%!important;
+    height: 48px!important;
+    font-size: 24px!important;
+    background-color:#0886de!important;
+    color:#fff!important;
 }
 .item .VPFeature .title[data-v-549c013f] {
-    line-height: 24px;
-    font-size: 16px;
-    font-weight: 600;
+    line-height: 24px!important;
+    font-size: 16px!important;
+    font-weight: 600!important;
   
 }
 .item .VPFeature .details {
@@ -94,15 +94,16 @@ a.VPButton.medium.alt{
 .VPNavBarMenuGroup .button span:hover{
    color:var(--vp-c-brand)!important;
 }
+ 
 nav.VPNavBarMenu.menu a,button {
-    font-size: 15px;
+    font-size: 15px!important;
 }
 nav.VPNavBarMenu.menu div span{
-    font-size: 15px;
+    font-size: 15px!important;
 }
 aside.VPSidebar::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0!important;
+    height: 0!important;
 }
 
 p > img {
@@ -114,10 +115,6 @@ pre code span.line:not(:last-child) {
   min-height: 1.5rem;
 }
 
- 
- 
- 
-
 a.title{
 color: #606266 !important
 } 
@@ -127,7 +124,18 @@ color: #606266 !important
     color: var(--vp-button-brand-hover-text);
     background-color: #2fbcff !important;
 }
+a.VPButton.medium.brand:hover{
+    border-color: #2fbcff !important;
+    color: var(--vp-button-brand-hover-text);
+    background-color: #2fbcff !important;
+}
 
+p.text {
+        background: linear-gradient(to right, red, #0886de);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+}
 
 
 
