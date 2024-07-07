@@ -29,7 +29,7 @@ import {plugInExtensionTuiEditor}from "../../router/PlugInExtension/tuiEditor"
 import { defineConfig } from 'vitepress'
 export default defineConfig({
   //配置
-  base: '/comwangxingfei/',
+  base: '/comWangXingFei.github.io/',
   title: '王兴飞文档',
   titleTemplate: '王兴飞文档',
   description: 'Vite & Vue powered static site generator.',
