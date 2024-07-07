@@ -22,6 +22,10 @@ import { backendJavaSE } from "../../router/backend/javaSE"
 import { toolSoftwareLinux } from "../../router/toolSoftware/linux"
 //引入git栏目侧边栏导航配置
 import { toolSoftwareGit } from "../../router/toolSoftware/git"
+//引入maven栏目侧边栏导航配置
+import { backendMaven} from "../../router/backend/maven"
+//引入tui.editor插件侧边栏
+import {plugInExtensionTuiEditor}from "../../router/PlugInExtension/tuiEditor"
 import { defineConfig } from 'vitepress'
 export default defineConfig({
   //配置
@@ -50,6 +54,12 @@ export default defineConfig({
     outlineTitle: '在本页面',
     // 启动页面丝滑滚动
     smoothScroll: true,
+    algolia: {
+      apiKey: '<API_KEY>',
+      indexName: '<INDEX_NAME>',
+      // 如果 Algolia 没有为你提供 `appId` ，使用 `BH4D9OD16A` 或者移除该配置项
+      appId: '<BH4D9OD16A>',
+    },
     // 导航栏配置
     socialLinks: [{ icon: 'github', link: 'https://github.com/pokerboy123' }],
     nav: [
@@ -74,7 +84,7 @@ export default defineConfig({
               },
               {
                 text: 'TypeScript',
-                link: '/frontend/Typescript/get-started-quickly',
+                link: '/frontend/Typescript/',
               },
             ],
           },
@@ -148,7 +158,32 @@ export default defineConfig({
           },
         ],
       },
-      { text: '插件扩展', link: '/personal/start' },
+      {
+        text: '开发问题随记',
+        activeMatch: '/PlugInExtension/',
+        items: [
+          {
+            items: [
+              {
+                text: 'tui.editor',
+                link: '/PlugInExtension/tuiEditor/',
+              },
+              {
+                text: '前端实现分页及模糊匹配',
+                link: '/PlugInExtension/problemRecord/qus/',
+              },
+              {
+                text: 'vue3-函数式组件开发与注册',
+                link: '/PlugInExtension/problemRecord/qus2/',
+              },
+              {
+                text: 'vue2-视频播放组件',
+                link: '/PlugInExtension/problemRecord/qus3/',
+              },
+            ],
+          },
+        ],
+      },
       { text: '简书', link: 'https://www.jianshu.com/u/94f29127275f' },
     ],
     sidebar: {
@@ -164,7 +199,12 @@ export default defineConfig({
       '/frontend/Pinia/': pinia(),
       '/backend/JavaSE/': backendJavaSE(),
       '/toolSoftware/Linux/': toolSoftwareLinux(),
-      '/toolSoftware/Git/': toolSoftwareGit()
+      '/toolSoftware/Git/': toolSoftwareGit(),
+      '/backend/Maven/':backendMaven(),
+      '/PlugInExtension/tuiEditor/':plugInExtensionTuiEditor(),
+      '/PlugInExtension/problemRecord/qus':plugInExtensionTuiEditor(),
+      '/PlugInExtension/problemRecord/qus2':plugInExtensionTuiEditor(),
+      '/PlugInExtension/problemRecord/qus3':plugInExtensionTuiEditor()
     },
     footer: {
       message: 'Released under the MIT License.',

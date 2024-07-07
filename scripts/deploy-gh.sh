@@ -18,7 +18,7 @@ git add -A
  
 git commit -m '版本发布'
 
-git push -f https://gitee.com/wFeia/comWangXingFei.git master:Blog
+git push -f https://gitee.com/wFeia/comWangXingFei.git master:mg-version-2.0.0
 
 # # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages

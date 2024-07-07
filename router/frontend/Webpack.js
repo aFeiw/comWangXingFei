@@ -7,7 +7,7 @@ export function frontendWebpack() {
         { text: '配置', link: '/frontend/Webpack/config' },
         {
           text: 'Webpack的开发服务',
-          link: '/frontend/Webpack/WebpackService',
+          link: '/frontend/Webpack/webpackService',
         },
         { text: '补充', link: '/frontend/Webpack/support' },
       ],

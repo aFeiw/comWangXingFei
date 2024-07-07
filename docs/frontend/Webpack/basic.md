@@ -1,4 +1,4 @@
-# 1.webpack 的基础知识
+# webpack 的基础知识
 
 [webpack 官网](https://webpack.docschina.org/)
 

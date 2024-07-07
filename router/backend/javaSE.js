@@ -32,7 +32,6 @@ export function backendJavaSE() {
          //开启折叠
       collapsible: true,
           items: [
-            { text: '数据结构', link: '/backend/JavaSE/数据结构' },
             { text: '模拟斗地主洗牌发牌', link: '/backend/JavaSE/模拟斗地主洗牌发牌' },
             { text: '图书管理系统', link: '/backend/JavaSE/图书管理系统' },
             { text: '排序算法介绍', link: '/backend/JavaSE/排序算法介绍' },

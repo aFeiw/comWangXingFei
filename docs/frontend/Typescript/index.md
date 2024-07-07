@@ -1,4 +1,4 @@
-#  1. TypeScript快速上手
+#  TypeScript快速上手
 
 `安装编译 TS 的依赖`
 

@@ -38,30 +38,6 @@ p.description{
 .nav-bar a.nav-bar-title{
   color var(--c-brand)!important
 }
-
-.container
-  justify-content: center;
-
-a.sidebar-link-item.active{
-}
-.container .main {
-    max-width: 800px;
-}
-.container .main .name .clip{
-    font-size:40px !important;
-}
-.container .main p.text {
-     font-size:30px !important;
-}
-.VPHero.has-image .container{
-    text-align: center !important
-}
-.VPHero.has-image .actions {
-     justify-content: center !important
-}
-.container .image {
-    display: none;
-}
 a.VPButton.medium.brand {
     font-weight: 800!important;
 }
@@ -116,9 +92,12 @@ pre code span.line:not(:last-child) {
 }
 
 a.title{
-color: #606266 !important
+color: #606266 !important;
+line-height: initial !important;
 } 
-
+img.VPImage.logo {
+    margin-bottom: 0.5vh !important;
+}
 .VPButton.brand[data-v-2dba8ca9]:hover {
     border-color: #2fbcff !important;
     color: var(--vp-button-brand-hover-text);
@@ -136,6 +115,19 @@ p.text {
         color: transparent;
         display: inline-block;
 }
+span.clip{
+   background-image: -webkit-linear-gradient(45deg, #0886de, #1cbbb4) !important;
+   -webkit-background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+}
 
-
+.image-src {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-39%, -50%) !important;
+}
+div#VPContent {
+    margin-top: 2vh !important;
+}
 

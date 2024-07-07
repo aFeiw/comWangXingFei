@@ -4,7 +4,7 @@ export function frontendTypescript() {
       items: [
         {
           text: '快速上手',
-          link: '/frontend/Typescript/get-started-quickly',
+          link: '/frontend/Typescript/',
         },
         {
           text: '声明变量',
