@@ -12,7 +12,7 @@ hero:
       link: /frontend/HTML/
     - theme: alt
       text: 了解作者 🖖
-      link: https://wfeia.gitee.io/website
+      link: https://afei-1122.github.io/aFeiWebsite/
 features:
     - title: 💡 Instant Server Start
       details: On demand file serving over native ESM, no bundling required!
