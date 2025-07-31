@@ -18,7 +18,8 @@ git add -A
  
 git commit -m '版本发布'
 
-git push -f https://github.com/aFeiw/comWangXingFei master:mg-version-2.5.8.1
+# 推送到main分支而不是master分支
+git push -f https://github.com/aFeiw/comWangXingFei main:mg-version-2.5.8.1
 
 # # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
