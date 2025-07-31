@@ -18,14 +18,14 @@ git add -A
  
 git commit -m '版本发布'
 
-# 推送到main分支而不是master分支
-git push -f https://github.com/aFeiw/comWangXingFei master:mg-version-2.5.0.8.0.1
+# 推送到目标分支
+git push -f https://github.com/aFeiw/comWangXingFei main:mg-version-2.5.0.8.0.1
 
 # # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
-# cd -
+cd -
 
-# rm -rf docs/.vitepress/dist
+rm -rf docs/.vitepress/dist
  
-# rm -rf docs/node_modules
+rm -rf docs/node_modules
