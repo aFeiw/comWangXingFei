@@ -14,7 +14,7 @@ hero:
       text: 早期博客 🎙️
       link: https://afeiw.github.io/aFeiWebsite/
     - theme: alt
-      text: 调酒APP🍸
+      text: 自研产品->调酒APP🍸
       link: http://flyahub.cn/
 features:
     - title: 💡 技术探索
