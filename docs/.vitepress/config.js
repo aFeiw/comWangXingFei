@@ -96,7 +96,7 @@ export default defineConfig({
       },
       {
         text: '前端',
-        activeMatch: '/frontend/',
+        activeMatch: '/frontend/(?!CrossPlatform)',
         items: [
           {
             items: [
@@ -273,7 +273,7 @@ export default defineConfig({
     },
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2022-present wxf'
+      copyright: 'Copyright © 2025-present wxf'
     },
     docFooter: {
       prev: ' 上一页 ',

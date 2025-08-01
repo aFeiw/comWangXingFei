@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: 王兴飞文档
-  tagline: Stay hungry,Stay foolish =='求知若饥,虚心若愚'
+  tagline: 技术探索与产品实践 | 记录学习历程，寻找发展方向，分享首个上架产品调酒APP的创作历程
   image:
     src: ./learning.png
     alt: VitePress
@@ -17,12 +17,12 @@ hero:
       text: 原创作品 -> 调酒吧APP🍸
       link: http://flyahub.cn/
 features:
-    - title: 💡 Instant Server Start
-      details: On demand file serving over native ESM, no bundling required!
-    - title: 🔩 Lightning Fast HMR
-      details: Hot Module Replacement (HMR) that stays fast regardless of app size.
-    - title: 🛠️ Rich Features
-      details: Out-of-the-box support for TypeScript, JSX, CSS and more.
+    - title: 💡 技术探索
+      details: 深入前端、后端、跨平台等技术领域，记录学习心得和实践经验
+    - title: 🚀 产品实践
+      details: 从创意到上架，分享调酒APP的完整开发历程和产品思维
+    - title: 🎯 方向寻找
+      details: 在技术海洋中探索个人发展方向，寻找最适合的技术栈和产品方向
 ---
  
  
