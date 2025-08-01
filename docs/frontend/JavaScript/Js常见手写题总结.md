@@ -68,7 +68,7 @@ let promiseChain = Promise.resolve();
 
 ### 实现Promise与then
 
-[实现Promise与then](./手动实现Promise.md)
+手动实现Promise（详见手动实现Promise.md文件）
 
 ### 实现Promise.all
 
@@ -104,7 +104,7 @@ promiseAll([
 
 ### 常见排序与复杂度
 
-[常见排序与复杂度](./Js实现数组排序.md)
+常见排序与复杂度（详见Js实现数组排序.md文件）
 
 ### 字典序排序
 
