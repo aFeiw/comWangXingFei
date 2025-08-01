@@ -28,6 +28,8 @@ import { toolSoftwareGit } from "../../router/toolSoftware/git"
 import { backendMaven} from "../../router/backend/maven"
 //引入tui.editor插件侧边栏
 import {plugInExtensionTuiEditor}from "../../router/PlugInExtension/tuiEditor"
+//引入创作灵感侧边栏导航配置
+import { personalInspiration } from "../../router/personal/inspiration"
 import { defineConfig } from 'vitepress'
 export default defineConfig({
   //配置
@@ -66,6 +68,32 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/pokerboy123' }],
     nav: [
       { text: '首页', link: '/' },
+      {
+        text: '创作灵感',
+        activeMatch: '/personal/',
+        items: [
+          {
+            items: [
+              {
+                text: 'App设计思路',
+                link: '/personal/app-design/',
+              },
+              {
+                text: '业务发现与创新',
+                link: '/personal/business-innovation/',
+              },
+              {
+                text: '产品思维',
+                link: '/personal/product-thinking/',
+              },
+              {
+                text: '用户体验设计',
+                link: '/personal/ux-design/',
+              },
+            ],
+          },
+        ],
+      },
       {
         text: '跨平台解决方案',
         activeMatch: '/frontend/CrossPlatform/',
@@ -242,32 +270,7 @@ export default defineConfig({
           },
         ],
       },
-      {
-        text: '开发问题随记',
-        activeMatch: '/PlugInExtension/',
-        items: [
-          {
-            items: [
-              {
-                text: 'tui.editor',
-                link: '/PlugInExtension/tuiEditor/',
-              },
-              {
-                text: '前端实现分页及模糊匹配',
-                link: '/PlugInExtension/problemRecord/qus/',
-              },
-              {
-                text: 'vue3-函数式组件开发与注册',
-                link: '/PlugInExtension/problemRecord/qus2/',
-              },
-              {
-                text: 'vue2-视频播放组件',
-                link: '/PlugInExtension/problemRecord/qus3/',
-              },
-            ],
-          },
-        ],
-      },
+
       { text: '简书', link: 'https://www.jianshu.com/u/94f29127275f' },
     ],
     sidebar: {
@@ -289,7 +292,8 @@ export default defineConfig({
       '/PlugInExtension/tuiEditor/':plugInExtensionTuiEditor(),
       '/PlugInExtension/problemRecord/qus':plugInExtensionTuiEditor(),
       '/PlugInExtension/problemRecord/qus2':plugInExtensionTuiEditor(),
-      '/PlugInExtension/problemRecord/qus3':plugInExtensionTuiEditor()
+      '/PlugInExtension/problemRecord/qus3':plugInExtensionTuiEditor(),
+      '/personal/': personalInspiration(),
     },
     footer: {
       message: 'Released under the MIT License.',
