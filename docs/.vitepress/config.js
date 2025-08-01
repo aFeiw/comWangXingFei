@@ -16,8 +16,8 @@ import { frontendWebpack } from '../../router/frontend/Webpack'
 import { vueRouter } from '../../router/frontend/vueRouter'
 import { vueX } from '../../router/frontend/vueX'
 import { pinia } from '../../router/frontend/pinia'
-//引入Flutter侧边栏导航配置
-import { frontendFlutter } from '../../router/frontend/flutter'
+//引入跨平台解决方案侧边栏导航配置
+import { frontendCrossPlatform } from '../../router/frontend/crossPlatform'
 //引入javaSE栏目侧边栏导航配置
 import { backendJavaSE } from "../../router/backend/javaSE"
 //引入Linux栏目侧边栏导航配置
@@ -67,6 +67,20 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       {
+        text: '跨平台解决方案',
+        activeMatch: '/frontend/CrossPlatform/',
+        items: [
+          {
+            items: [
+              {
+                text: 'Flutter',
+                link: '/frontend/CrossPlatform/',
+              },
+            ],
+          },
+        ],
+      },
+      {
         text: '大前端',
         activeMatch: '/frontend/',
         items: [
@@ -99,10 +113,6 @@ export default defineConfig({
               {
                 text: 'React',
                 link: '/frontend/React/',
-              },
-              {
-                text: 'Flutter',
-                link: '/frontend/Flutter/',
               },
             ],
           },
@@ -203,7 +213,7 @@ export default defineConfig({
       '/frontend/VueRouter/': vueRouter(),
       '/frontend/Vuex/': vueX(),
       '/frontend/Pinia/': pinia(),
-      '/frontend/Flutter/': frontendFlutter(),
+      '/frontend/CrossPlatform/': frontendCrossPlatform(),
       '/backend/JavaSE/': backendJavaSE(),
       '/toolSoftware/Linux/': toolSoftwareLinux(),
       '/toolSoftware/Git/': toolSoftwareGit(),
