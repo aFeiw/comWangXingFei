@@ -5,22 +5,22 @@ Vite 是一个现代化的前端构建工具，提供极快的开发服务器启
 ## 目录
 
 ### 基础概念
-- [Vite 架构理解](./architecture.md)
-- [插件系统详解](./plugins.md)
-- [构建配置](./build-config.md)
-- [开发服务器](./dev-server.md)
+- Vite 架构理解
+- 插件系统详解
+- 构建配置
+- 开发服务器
 
 ### 框架集成
-- [Vue 集成](./vue-integration.md)
-- [React 集成](./react-integration.md)
-- [TypeScript 支持](./typescript-support.md)
-- [CSS 预处理](./css-preprocessors.md)
+- Vue 集成
+- React 集成
+- TypeScript 支持
+- CSS 预处理
 
 ### 高级特性
-- [环境变量](./environment-variables.md)
-- [静态资源处理](./static-assets.md)
-- [依赖预构建](./dependency-pre-bundling.md)
-- [性能优化](./performance.md)
+- 环境变量
+- 静态资源处理
+- 依赖预构建
+- 性能优化
 
 ## 快速开始
 
@@ -330,7 +330,7 @@ export default defineConfig({
 
 ### Docker 部署
 
-```dockerfile
+```docker
 # Dockerfile
 FROM node:16-alpine
 

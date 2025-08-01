@@ -5,27 +5,27 @@
 ## 目录
 
 ### 代码生成工具
-- [GitHub Copilot](./github-copilot.md)
-- [Amazon CodeWhisperer](./amazon-codewhisperer.md)
-- [Tabnine](./tabnine.md)
-- [Kite](./kite.md)
+- GitHub Copilot
+- Amazon CodeWhisperer
+- Tabnine
+- Kite
 
 ### 代码分析工具
-- [SonarQube](./sonarqube.md)
-- [CodeClimate](./codeclimate.md)
-- [DeepCode](./deepcode.md)
-- [Snyk](./snyk.md)
+- SonarQube
+- CodeClimate
+- DeepCode
+- Snyk
 
 ### 自动化测试
-- [Testim](./testim.md)
-- [Applitools](./applitools.md)
-- [Mabl](./mabl.md)
-- [Functionize](./functionize.md)
+- Testim
+- Applitools
+- Mabl
+- Functionize
 
 ### 文档生成
-- [JSDoc AI](./jsdoc-ai.md)
-- [Docstring Generator](./docstring-generator.md)
-- [Code Documentation](./code-documentation.md)
+- JSDoc AI
+- Docstring Generator
+- Code Documentation
 
 ## GitHub Copilot
 

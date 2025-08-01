@@ -5,28 +5,28 @@ SQL (Structured Query Language) 是用于管理关系数据库的标准语言。
 ## 目录
 
 ### 基础概念
-- [SQL 基础语法](./basic-syntax.md)
-- [数据类型详解](./data-types.md)
-- [约束条件](./constraints.md)
-- [索引优化](./indexes.md)
+- SQL 基础语法
+- 数据类型详解
+- 约束条件
+- 索引优化
 
 ### 查询操作
-- [SELECT 查询](./select-queries.md)
-- [WHERE 条件](./where-clauses.md)
-- [JOIN 连接](./joins.md)
-- [聚合函数](./aggregate-functions.md)
+- SELECT 查询
+- WHERE 条件
+- JOIN 连接
+- 聚合函数
 
 ### 数据操作
-- [INSERT 插入](./insert.md)
-- [UPDATE 更新](./update.md)
-- [DELETE 删除](./delete.md)
-- [事务处理](./transactions.md)
+- INSERT 插入
+- UPDATE 更新
+- DELETE 删除
+- 事务处理
 
 ### 高级特性
-- [存储过程](./stored-procedures.md)
-- [触发器](./triggers.md)
-- [视图](./views.md)
-- [性能优化](./performance.md)
+- 存储过程
+- 触发器
+- 视图
+- 性能优化
 
 ## 基础语法
 

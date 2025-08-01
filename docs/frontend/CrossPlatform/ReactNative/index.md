@@ -5,30 +5,30 @@ React Native 是 Facebook 开发的开源跨平台移动应用开发框架，使
 ## 目录
 
 ### 基础概念
-- [React Native 架构理解](./architecture.md)
-- [JavaScript 基础](./javascript-basics.md)
-- [组件系统详解](./component-system.md)
-- [状态管理](./state-management.md)
+- React Native 架构理解
+- JavaScript 基础
+- 组件系统详解
+- 状态管理
 
 ### 核心组件
-- [基础组件](./basic-components.md)
-- [导航组件](./navigation.md)
-- [列表组件](./list-components.md)
+- 基础组件
+- 导航组件
+- 列表组件
 
 ### 高级特性
-- [动画系统](./animations.md)
-- [手势处理](./gestures.md)
-- [网络请求](./http-requests.md)
-- [原生模块集成](./native-modules.md)
+- 动画系统
+- 手势处理
+- 网络请求
+- 原生模块集成
 
 ### 性能优化
-- [性能优化技巧](./performance.md)
-- [内存管理](./memory-management.md)
+- 性能优化技巧
+- 内存管理
 
 ### 开发工具
-- [开发环境搭建](./development-setup.md)
-- [调试技巧](./debugging.md)
-- [打包发布](./deployment.md)
+- 开发环境搭建
+- 调试技巧
+- 打包发布
 
 ## 快速开始
 

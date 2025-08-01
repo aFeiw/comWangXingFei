@@ -5,22 +5,22 @@ Spring Boot 是一个基于 Spring 框架的快速开发平台，简化了 Sprin
 ## 目录
 
 ### 基础概念
-- [Spring Boot 架构理解](./architecture.md)
-- [自动配置原理](./auto-configuration.md)
-- [启动流程详解](./startup-process.md)
-- [配置管理](./configuration.md)
+- Spring Boot 架构理解
+- 自动配置原理
+- 启动流程详解
+- 配置管理
 
 ### 核心功能
-- [Web 开发](./web-development.md)
-- [数据访问](./data-access.md)
-- [安全认证](./security.md)
-- [缓存机制](./caching.md)
+- Web 开发
+- 数据访问
+- 安全认证
+- 缓存机制
 
 ### 高级特性
-- [微服务架构](./microservices.md)
-- [监控管理](./monitoring.md)
-- [性能优化](./performance.md)
-- [部署策略](./deployment.md)
+- 微服务架构
+- 监控管理
+- 性能优化
+- 部署策略
 
 ## 快速开始
 
@@ -504,7 +504,7 @@ public class EmailService {
 
 ### Docker 部署
 
-```dockerfile
+```docker
 # Dockerfile
 FROM openjdk:17-jdk-slim
 
