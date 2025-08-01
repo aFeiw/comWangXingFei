@@ -269,7 +269,7 @@ export default defineConfig({
       '/PlugInExtension/problemRecord/qus':plugInExtensionTuiEditor(),
       '/PlugInExtension/problemRecord/qus2':plugInExtensionTuiEditor(),
       '/PlugInExtension/problemRecord/qus3':plugInExtensionTuiEditor(),
-      '/personal/': personalInspiration(),
+      // '/personal/': personalInspiration(),
     },
     footer: {
       message: 'Released under the MIT License.',
