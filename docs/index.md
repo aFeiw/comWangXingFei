@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: 王兴飞文档
-  tagline: 技术探索与产品实践 | 记录学习历程，寻找发展方向，分享首个上架产品调酒APP的创作历程
+  tagline: 技术探索与产品实践 | 早期记录学习历程，后续将分享首个上架产品调酒APP的创作历程
   image:
     src: ./learning.png
     alt: VitePress
