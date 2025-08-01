@@ -1,7 +1,171 @@
-# 浏览器的兼容性问题
+# HTML 前端开发指南
+
+HTML（HyperText Markup Language）是构建网页的标准标记语言，是前端开发的基础。
+
+## 目录
+
+- [HTML5 新特性](./HTML5新特性.md)
+- [语义化标签](./HTML语义化.md)
+- [表单与验证](./HTML节点操作.md)
+- [多媒体元素](./Canvas基础.md)
+- [存储技术](./LocalStorage与SessionStorage.md)
+- [浏览器兼容性](#浏览器兼容性问题)
+
+## HTML5 核心特性
+
+### 1. 语义化标签
+
+```html
+<!-- 页面结构 -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home">首页</a></li>
+      <li><a href="#about">关于</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <section>
+      <h1>文章标题</h1>
+      <p>文章内容...</p>
+    </section>
+  </article>
+  
+  <aside>
+    <h2>侧边栏</h2>
+    <ul>
+      <li>相关链接</li>
+    </ul>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2024 版权所有</p>
+</footer>
+```
+
+### 2. 表单增强
+
+```html
+<!-- 新的输入类型 -->
+<form>
+  <input type="email" placeholder="邮箱地址" required>
+  <input type="url" placeholder="网址">
+  <input type="tel" placeholder="电话号码">
+  <input type="number" min="0" max="100" step="1">
+  <input type="range" min="0" max="100">
+  <input type="date">
+  <input type="time">
+  <input type="color">
+  <input type="file" accept="image/*">
+  
+  <!-- 表单验证 -->
+  <input type="text" pattern="[A-Za-z]{3}" title="请输入3个字母">
+  <input type="password" minlength="8" required>
+  
+  <button type="submit">提交</button>
+</form>
+```
+
+### 3. 多媒体支持
+
+```html
+<!-- 视频播放 -->
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.webm" type="video/webm">
+  您的浏览器不支持视频标签
+</video>
+
+<!-- 音频播放 -->
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  <source src="audio.ogg" type="audio/ogg">
+  您的浏览器不支持音频标签
+</audio>
+
+<!-- Canvas 绘图 -->
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'red';
+  ctx.fillRect(10, 10, 50, 50);
+</script>
+```
+
+## 现代HTML最佳实践
+
+### 1. 文档结构
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="页面描述">
+  <meta name="keywords" content="关键词">
+  <title>页面标题</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <!-- 页面内容 -->
+</body>
+</html>
+```
+
+### 2. 可访问性
+
+```html
+<!-- 使用语义化标签 -->
+<nav role="navigation" aria-label="主导航">
+  <ul>
+    <li><a href="#home" aria-current="page">首页</a></li>
+    <li><a href="#about">关于</a></li>
+  </ul>
+</nav>
+
+<!-- 图片可访问性 -->
+<img src="logo.png" alt="公司标志" width="200" height="100">
+
+<!-- 表单可访问性 -->
+<label for="username">用户名：</label>
+<input type="text" id="username" name="username" aria-describedby="username-help">
+<div id="username-help">请输入3-20个字符的用户名</div>
+```
+
+### 3. 性能优化
+
+```html
+<!-- 预加载关键资源 -->
+<link rel="preload" href="critical.css" as="style">
+<link rel="preload" href="main.js" as="script">
+
+<!-- 延迟加载非关键资源 -->
+<script src="non-critical.js" defer></script>
+
+<!-- 图片懒加载 -->
+<img src="placeholder.jpg" data-src="actual-image.jpg" loading="lazy" alt="图片描述">
+
+<!-- 响应式图片 -->
+<picture>
+  <source media="(min-width: 800px)" srcset="large.jpg">
+  <source media="(min-width: 400px)" srcset="medium.jpg">
+  <img src="small.jpg" alt="响应式图片">
+</picture>
+```
+
+## 浏览器兼容性问题
+
 浏览器有着大量不同的版本，不同种类的浏览器的内核也不尽相同，所以不同浏览器对代码的解析会存在差异，这就导致对页面渲染效果不统一的问题。
 
-## 初始化样式
+### 初始化样式
+
 因浏览器兼容的问题，不同的浏览器对标签的默认样式值不同，如果不初始化会造成不同浏览器之间的显示差异，布局出现错乱，所以要初始化样式，达到统一的布局。  
 最粗暴的方案就是使用`*`初始化样式，但是其会对于所有的标签加载样式以及计算样式优先级，可能会对性能有所影响。
 
@@ -11,15 +175,16 @@
     padding: 0;
 }
 ```
+
 通常使用`Normalize.css`抹平默认样式差异，当然也可以根据样式定制自己的`reset.css`。
 
 ```html
 <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
 ```
 
-## 内核样式兼容
-在`CSS3`标准还未确定时，部分浏览器已经根据最初草案实现了部分功能，为了与之后确定下来的标准进行兼容，所以每种浏览器使用了自己的私有前缀与标准进行区分，当标准确立后，各大浏览器将逐步支持不带前缀的`CSS3`新属性，目前已有很多私有前缀可以不写了，但为了兼容老版本的浏览器，可以仍沿用私有前缀和标准方法，逐渐过渡。
+### 内核样式兼容
 
+在`CSS3`标准还未确定时，部分浏览器已经根据最初草案实现了部分功能，为了与之后确定下来的标准进行兼容，所以每种浏览器使用了自己的私有前缀与标准进行区分，当标准确立后，各大浏览器将逐步支持不带前缀的`CSS3`新属性，目前已有很多私有前缀可以不写了，但为了兼容老版本的浏览器，可以仍沿用私有前缀和标准方法，逐渐过渡。
 
 |内核| 代表浏览器 | 前缀 |
 | --- | --- | --- |
@@ -28,7 +193,8 @@
 | Presto | Opera | -o |
 | Webkit | Chrome、Safari | -webkit |
 
-## 透明属性
+### 透明属性
+
 用来设定元素透明度的`opacity`是`CSS 3`里的一个属性，现代浏览器都已经支持，对于老版本浏览器可以通过加入私有前缀来支持，对于`IE6-IE8`可以通过`filter`属性来支持，`IE4-IE9`都可以通过滤镜写法提供兼容支持。
 
 ```css
@@ -38,14 +204,16 @@ filter: alpha(opacity = 50); //IE6-IE8
 filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50); //IE4-IE9
 ```
 
-## 媒体查询
+### 媒体查询
+
 对于`IE9`以下浏览器不支持`CSS3`媒体查询的问题，通常使用`respond.js`来作为兼容性解决方案。
 
 ```html
 <script type="text/javascript" src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 ```
 
-## HTML5标签
+### HTML5标签
+
 对于`IE9`以下浏览器不支持`HTML5`新标签的问题，可以使用`document.createElement`创建元素并设置其`CSS`样式即可，通常使用`html5shiv.js`来作为兼容性解决方案。
 
 ```html
@@ -61,16 +229,17 @@ filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50); //IE4-
 <script type="text/javascript" src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 ```
 
-## placeholder兼容性
-`placeholder`是`html5`新增的一个属性，当`input`或者`textarea`设置了该属性后，该值的内容将作为灰字提示显示在文本框中，当文本框获得焦点或输入内容时，提示文字消失。对于其兼容性首先需要判断`input`是否支持`placeholder`，然后在不支持的情况下可以通过`input`的`onfocus`与`onblur`事件监听来实现`placeholder`效果。
+### placeholder兼容性
 
+`placeholder`是`html5`新增的一个属性，当`input`或者`textarea`设置了该属性后，该值的内容将作为灰字提示显示在文本框中，当文本框获得焦点或输入内容时，提示文字消失。对于其兼容性首先需要判断`input`是否支持`placeholder`，然后在不支持的情况下可以通过`input`的`onfocus`与`onblur`事件监听来实现`placeholder`效果。
 
 ```html
 <!-- 简单示例 -->
 <input type="text" value="Tips" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Tips';}">
 ```
 
-## 事件监听句柄
+### 事件监听句柄
+
 在`IE9`之前，必须使用`attachEvent`而不是使用标准方法`addEventListener`来注册元素的监听器，事件兼容的问题，通常需要会封装一个适配器的方法，过滤事件句柄绑定、移除。
 
 ```javascript
@@ -99,10 +268,10 @@ filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50); //IE4-
         }, true);
      }
  };
-
 ```
 
-## 阻止默认行为
+### 阻止默认行为
+
 `W3C`推荐的阻止默认行为的方式是`event.preventDefault()`，此方法只会阻止默认行为而不会阻止事件的传播。`IE9`之前的浏览器阻止默认行为需要使用`window.event.returnValue = false`。直接在事件处理函数中`return false`也能阻止默认行为，只在`DOM0`级模型中有效。此外，在`jQuery`中使用`return false`会同时阻止默认行为与事件传播，通常也会封装一个方法来实现默认行为的阻止。
 
 ```javascript
@@ -116,7 +285,8 @@ handler.preventDefault = function(event) {
 }
 ```
 
-## 阻止事件冒泡
+### 阻止事件冒泡
+
 `W3C`推荐的阻止冒泡的方法是`event.stopPropagation()`，`IE9`之前则是使用`window.event.cancelBubble = true;`，通常也会封装一个方法来实现阻止事件冒泡。
 
 ```javascript
@@ -130,21 +300,24 @@ handler.stopPropagation = function(event) {
 }
 ```
 
-## 滚动高度
+### 滚动高度
+
 获取窗口的滚动高度`scrollTop`需要采用兼容性写法，即使声明`<DOCTYPE>`浏览器对于文档的处理也会有所不同。
 
 ```javascript
 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 ```
 
-## 日期时间
+### 日期时间
+
 使用`new Date()`构造函数生成日期时间对象，对于`new Date("2020-06-29")`语法在一些早期的浏览器会输出`invalid date`，这主要是因为早期浏览器不支持表达日期的`-`，而`/`才是被广泛支持的，所以在处理早期浏览器的兼容性时需要将`-`替换为`/`。
 
 ```javascript
 new Date("2020-06-29".replace(/-/g, "/"));
 ```
 
-## IE条件注释
+### IE条件注释
+
 `IE`专门提供的一种语法，只有IE能识别运行，其他浏览器只会作为注解。
 
 ```html
@@ -179,8 +352,6 @@ new Date("2020-06-29".replace(/-/g, "/"));
     () 子表达式运算符 用于与布尔运算符创建更复杂的表达式
 -->
 ```
-
-
 
 ## 参考
 

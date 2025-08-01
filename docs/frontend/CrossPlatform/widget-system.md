@@ -1,56 +1,36 @@
-# Widget 系统详解
+# Flutter Widget 系统详解
 
-Flutter 中的一切都是 Widget，Widget 是 Flutter 应用的基础构建块。
+Widget 是 Flutter 应用的基础构建块，每个 UI 元素都是一个 Widget。理解 Widget 系统是掌握 Flutter 开发的关键。
 
 ## Widget 基础概念
 
-### 1. Widget 类型
+### Widget 类型
 
-#### StatelessWidget (无状态组件)
 ```dart
-class MyStatelessWidget extends StatelessWidget {
+// StatelessWidget - 无状态组件
+class MyWidget extends StatelessWidget {
   final String title;
   
-  const MyStatelessWidget({Key? key, required this.title}) : super(key: key);
+  const MyWidget({Key? key, required this.title}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(16.0),
-      child: Text(
-        title,
-        style: TextStyle(fontSize: 18.0),
-      ),
-    );
+    return Text(title);
   }
 }
-```
 
-#### StatefulWidget (有状态组件)
-```dart
-class MyStatefulWidget extends StatefulWidget {
-  final String initialText;
-  
-  const MyStatefulWidget({Key? key, required this.initialText}) : super(key: key);
-  
+// StatefulWidget - 有状态组件
+class CounterWidget extends StatefulWidget {
   @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+  _CounterWidgetState createState() => _CounterWidgetState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  late String _text;
-  int _counter = 0;
+class _CounterWidgetState extends State<CounterWidget> {
+  int _count = 0;
   
-  @override
-  void initState() {
-    super.initState();
-    _text = widget.initialText;
-  }
-  
-  void _updateText() {
+  void _increment() {
     setState(() {
-      _counter++;
-      _text = 'Updated: $_counter';
+      _count++;
     });
   }
   
@@ -58,10 +38,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(_text),
+        Text('Count: $_count'),
         ElevatedButton(
-          onPressed: _updateText,
-          child: Text('Update'),
+          onPressed: _increment,
+          child: Text('Increment'),
         ),
       ],
     );
@@ -69,151 +49,69 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 }
 ```
 
-### 2. Widget 生命周期
-
-```dart
-class LifecycleWidget extends StatefulWidget {
-  @override
-  _LifecycleWidgetState createState() => _LifecycleWidgetState();
-}
-
-class _LifecycleWidgetState extends State<LifecycleWidget> with WidgetsBindingObserver {
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addObserver(this);
-    print('initState: Widget 被创建');
-  }
-  
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    print('didChangeDependencies: 依赖发生变化');
-  }
-  
-  @override
-  void didUpdateWidget(LifecycleWidget oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    print('didUpdateWidget: Widget 配置更新');
-  }
-  
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    super.didChangeAppLifecycleState(state);
-    print('App 生命周期变化: $state');
-  }
-  
-  @override
-  void deactivate() {
-    super.deactivate();
-    print('deactivate: Widget 从树中移除');
-  }
-  
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-    print('dispose: Widget 被销毁');
-  }
-  
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-```
-
 ## 布局 Widget
 
-### 1. 单子组件
+### 单子 Widget
 
-#### Container
 ```dart
+// Container - 容器组件
 Container(
   width: 200,
   height: 100,
-  margin: EdgeInsets.all(16.0),
-  padding: EdgeInsets.all(8.0),
+  margin: EdgeInsets.all(16),
+  padding: EdgeInsets.all(8),
   decoration: BoxDecoration(
     color: Colors.blue,
-    borderRadius: BorderRadius.circular(8.0),
-    boxShadow: [
-      BoxShadow(
-        color: Colors.black26,
-        blurRadius: 4.0,
-        offset: Offset(0, 2),
-      ),
-    ],
+    borderRadius: BorderRadius.circular(8),
   ),
-  child: Text(
-    'Container Widget',
-    style: TextStyle(color: Colors.white),
-  ),
+  child: Text('Hello World'),
 )
-```
 
-#### Padding
-```dart
-Padding(
-  padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-  child: Text('Padded Text'),
-)
-```
-
-#### Center
-```dart
+// Center - 居中组件
 Center(
   child: Text('Centered Text'),
 )
-```
 
-#### Align
-```dart
-Align(
-  alignment: Alignment.centerRight,
-  child: Text('Right Aligned'),
+// Padding - 内边距组件
+Padding(
+  padding: EdgeInsets.all(16),
+  child: Text('Padded Text'),
+)
+
+// SizedBox - 固定尺寸组件
+SizedBox(
+  width: 100,
+  height: 50,
+  child: Text('Fixed Size'),
 )
 ```
 
-### 2. 多子组件
+### 多子 Widget
 
-#### Column
 ```dart
+// Column - 垂直排列
 Column(
   mainAxisAlignment: MainAxisAlignment.center,
-  crossAxisAlignment: CrossAxisAlignment.stretch,
+  crossAxisAlignment: CrossAxisAlignment.start,
   children: [
     Text('First Item'),
-    SizedBox(height: 16.0),
     Text('Second Item'),
-    SizedBox(height: 16.0),
-    ElevatedButton(
-      onPressed: () {},
-      child: Text('Button'),
-    ),
+    Text('Third Item'),
   ],
 )
-```
 
-#### Row
-```dart
+// Row - 水平排列
 Row(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
     Icon(Icons.star),
-    Text('Rating: 4.5'),
-    ElevatedButton(
-      onPressed: () {},
-      child: Text('Rate'),
-    ),
+    Text('Rating'),
+    Text('4.5'),
   ],
 )
-```
 
-#### Stack
-```dart
+// Stack - 层叠排列
 Stack(
-  alignment: Alignment.center,
   children: [
     Container(
       width: 200,
@@ -221,293 +119,282 @@ Stack(
       color: Colors.blue,
     ),
     Positioned(
-      top: 20,
-      left: 20,
-      child: Icon(Icons.favorite, color: Colors.red),
-    ),
-    Positioned(
-      bottom: 20,
-      right: 20,
-      child: Text(
-        'Overlay Text',
-        style: TextStyle(color: Colors.white),
-      ),
+      top: 50,
+      left: 50,
+      child: Text('Overlay Text'),
     ),
   ],
 )
-```
 
-#### Wrap
-```dart
+// Wrap - 自动换行
 Wrap(
-  spacing: 8.0,
-  runSpacing: 8.0,
+  spacing: 8,
+  runSpacing: 4,
   children: [
     Chip(label: Text('Flutter')),
     Chip(label: Text('Dart')),
     Chip(label: Text('Widget')),
-    Chip(label: Text('Material Design')),
-    Chip(label: Text('Cross Platform')),
+    Chip(label: Text('UI')),
   ],
 )
 ```
 
-### 3. 列表组件
+## 显示 Widget
 
-#### ListView
+### 文本 Widget
+
 ```dart
-// 基本 ListView
-ListView(
-  children: [
-    ListTile(title: Text('Item 1')),
-    ListTile(title: Text('Item 2')),
-    ListTile(title: Text('Item 3')),
-  ],
-)
-
-// ListView.builder (性能优化)
-ListView.builder(
-  itemCount: items.length,
-  itemBuilder: (context, index) {
-    return ListTile(
-      leading: Icon(Icons.star),
-      title: Text(items[index].title),
-      subtitle: Text(items[index].subtitle),
-      trailing: Icon(Icons.arrow_forward_ios),
-      onTap: () => handleTap(index),
-    );
-  },
-)
-
-// ListView.separated
-ListView.separated(
-  itemCount: items.length,
-  separatorBuilder: (context, index) => Divider(),
-  itemBuilder: (context, index) {
-    return ListTile(title: Text(items[index]));
-  },
-)
-```
-
-#### GridView
-```dart
-GridView.count(
-  crossAxisCount: 2,
-  crossAxisSpacing: 16.0,
-  mainAxisSpacing: 16.0,
-  children: [
-    Card(child: Text('Grid Item 1')),
-    Card(child: Text('Grid Item 2')),
-    Card(child: Text('Grid Item 3')),
-    Card(child: Text('Grid Item 4')),
-  ],
-)
-
-// GridView.builder
-GridView.builder(
-  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 3,
-    childAspectRatio: 1.0,
+// Text - 基础文本
+Text(
+  'Hello World',
+  style: TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: Colors.blue,
   ),
-  itemCount: items.length,
-  itemBuilder: (context, index) {
-    return Card(
-      child: Center(child: Text('Item $index')),
-    );
-  },
 )
-```
 
-## 表单 Widget
-
-### 1. 输入组件
-
-#### TextField
-```dart
-class MyForm extends StatefulWidget {
-  @override
-  _MyFormState createState() => _MyFormState();
-}
-
-class _MyFormState extends State<MyForm> {
-  final TextEditingController _controller = TextEditingController();
-  String _inputValue = '';
-  
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-  
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TextField(
-          controller: _controller,
-          decoration: InputDecoration(
-            labelText: 'Enter your name',
-            hintText: 'John Doe',
-            prefixIcon: Icon(Icons.person),
-            border: OutlineInputBorder(),
-          ),
-          onChanged: (value) {
-            setState(() {
-              _inputValue = value;
-            });
-          },
-        ),
-        SizedBox(height: 16.0),
-        Text('You entered: $_inputValue'),
-      ],
-    );
-  }
-}
-```
-
-#### TextFormField
-```dart
-final _formKey = GlobalKey<FormState>();
-
-Form(
-  key: _formKey,
-  child: Column(
+// RichText - 富文本
+RichText(
+  text: TextSpan(
+    style: TextStyle(color: Colors.black),
     children: [
-      TextFormField(
-        decoration: InputDecoration(
-          labelText: 'Email',
-          border: OutlineInputBorder(),
+      TextSpan(text: 'Hello '),
+      TextSpan(
+        text: 'World',
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.blue,
         ),
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Please enter your email';
-          }
-          if (!value.contains('@')) {
-            return 'Please enter a valid email';
-          }
-          return null;
-        },
       ),
-      SizedBox(height: 16.0),
-      ElevatedButton(
-        onPressed: () {
-          if (_formKey.currentState!.validate()) {
-            // 表单验证通过
-            print('Form is valid');
-          }
-        },
-        child: Text('Submit'),
+    ],
+  ),
+)
+
+// Text.rich - 简化富文本
+Text.rich(
+  TextSpan(
+    children: [
+      TextSpan(text: 'Hello '),
+      TextSpan(
+        text: 'World',
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
     ],
   ),
 )
 ```
 
-### 2. 选择组件
+### 图片 Widget
 
-#### Checkbox
 ```dart
-bool _isChecked = false;
+// Image.network - 网络图片
+Image.network(
+  'https://example.com/image.jpg',
+  width: 200,
+  height: 200,
+  fit: BoxFit.cover,
+)
 
-Checkbox(
-  value: _isChecked,
-  onChanged: (bool? value) {
-    setState(() {
-      _isChecked = value ?? false;
-    });
+// Image.asset - 本地图片
+Image.asset(
+  'assets/images/logo.png',
+  width: 100,
+  height: 100,
+)
+
+// CircleAvatar - 圆形头像
+CircleAvatar(
+  radius: 50,
+  backgroundImage: NetworkImage('https://example.com/avatar.jpg'),
+)
+```
+
+### 图标 Widget
+
+```dart
+// Icon - 图标
+Icon(
+  Icons.star,
+  size: 24,
+  color: Colors.amber,
+)
+
+// IconButton - 可点击图标
+IconButton(
+  icon: Icon(Icons.favorite),
+  onPressed: () {
+    print('Icon pressed');
   },
 )
 ```
 
-#### Radio
-```dart
-String _selectedValue = 'option1';
+## 输入 Widget
 
-Column(
-  children: [
-    Radio<String>(
-      value: 'option1',
-      groupValue: _selectedValue,
-      onChanged: (String? value) {
-        setState(() {
-          _selectedValue = value!;
-        });
-      },
-    ),
-    Radio<String>(
-      value: 'option2',
-      groupValue: _selectedValue,
-      onChanged: (String? value) {
-        setState(() {
-          _selectedValue = value!;
-        });
-      },
-    ),
-  ],
+### 按钮 Widget
+
+```dart
+// ElevatedButton - 凸起按钮
+ElevatedButton(
+  onPressed: () {
+    print('Button pressed');
+  },
+  child: Text('Click Me'),
+)
+
+// TextButton - 文本按钮
+TextButton(
+  onPressed: () {
+    print('Text button pressed');
+  },
+  child: Text('Text Button'),
+)
+
+// OutlinedButton - 轮廓按钮
+OutlinedButton(
+  onPressed: () {
+    print('Outlined button pressed');
+  },
+  child: Text('Outlined Button'),
 )
 ```
 
-#### Switch
-```dart
-bool _isEnabled = false;
+### 输入框 Widget
 
-Switch(
-  value: _isEnabled,
-  onChanged: (bool value) {
-    setState(() {
-      _isEnabled = value;
-    });
+```dart
+// TextField - 文本输入框
+TextField(
+  decoration: InputDecoration(
+    labelText: 'Enter your name',
+    border: OutlineInputBorder(),
+    prefixIcon: Icon(Icons.person),
+  ),
+  onChanged: (value) {
+    print('Text changed: $value');
+  },
+)
+
+// TextFormField - 表单输入框
+TextFormField(
+  decoration: InputDecoration(
+    labelText: 'Email',
+    border: OutlineInputBorder(),
+  ),
+  validator: (value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your email';
+    }
+    return null;
+  },
+)
+```
+
+## 列表 Widget
+
+### ListView
+
+```dart
+// ListView.builder - 构建器列表
+ListView.builder(
+  itemCount: 100,
+  itemBuilder: (context, index) {
+    return ListTile(
+      leading: Icon(Icons.star),
+      title: Text('Item $index'),
+      subtitle: Text('Subtitle for item $index'),
+      onTap: () {
+        print('Tapped item $index');
+      },
+    );
+  },
+)
+
+// ListView.separated - 带分隔符的列表
+ListView.separated(
+  itemCount: 10,
+  separatorBuilder: (context, index) => Divider(),
+  itemBuilder: (context, index) {
+    return ListTile(
+      title: Text('Item $index'),
+    );
+  },
+)
+```
+
+### GridView
+
+```dart
+// GridView.builder - 网格视图
+GridView.builder(
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 2,
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+  ),
+  itemCount: 20,
+  itemBuilder: (context, index) {
+    return Card(
+      child: Center(
+        child: Text('Grid Item $index'),
+      ),
+    );
   },
 )
 ```
 
 ## 导航 Widget
 
-### 1. 基本导航
+### AppBar
 
 ```dart
-// 导航到新页面
-Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => SecondPage(),
-  ),
-);
-
-// 带参数导航
-Navigator.pushNamed(
-  context,
-  '/second',
-  arguments: {'id': 123, 'title': 'Detail Page'},
-);
-
-// 返回上一页
-Navigator.pop(context);
-
-// 返回并传递数据
-Navigator.pop(context, 'Returned Data');
+AppBar(
+  title: Text('My App'),
+  backgroundColor: Colors.blue,
+  actions: [
+    IconButton(
+      icon: Icon(Icons.search),
+      onPressed: () {
+        print('Search pressed');
+      },
+    ),
+    IconButton(
+      icon: Icon(Icons.more_vert),
+      onPressed: () {
+        print('More pressed');
+      },
+    ),
+  ],
+)
 ```
 
-### 2. 命名路由
+### BottomNavigationBar
 
 ```dart
-// 在 MaterialApp 中定义路由
-MaterialApp(
-  initialRoute: '/',
-  routes: {
-    '/': (context) => HomePage(),
-    '/second': (context) => SecondPage(),
-    '/detail': (context) => DetailPage(),
+BottomNavigationBar(
+  currentIndex: 0,
+  onTap: (index) {
+    print('Selected index: $index');
   },
-);
-
-// 使用命名路由导航
-Navigator.pushNamed(context, '/second');
+  items: [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.business),
+      label: 'Business',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.school),
+      label: 'School',
+    ),
+  ],
+)
 ```
 
 ## 自定义 Widget
 
-### 1. 组合 Widget
+### 组合 Widget
 
 ```dart
 class CustomCard extends StatelessWidget {
@@ -525,22 +412,27 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(8.0),
+      margin: EdgeInsets.all(8),
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title,
-                style: Theme.of(context).textTheme.headline6,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              SizedBox(height: 8.0),
+              SizedBox(height: 8),
               Text(
                 subtitle,
-                style: Theme.of(context).textTheme.bodyText2,
+                style: TextStyle(
+                  color: Colors.grey[600],
+                ),
               ),
             ],
           ),
@@ -551,100 +443,154 @@ class CustomCard extends StatelessWidget {
 }
 ```
 
-### 2. 自定义绘制 Widget
+### 动画 Widget
 
 ```dart
-class CustomPaintWidget extends StatelessWidget {
+class AnimatedCounter extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: MyCustomPainter(),
-      child: Container(
-        width: 200,
-        height: 200,
-      ),
-    );
-  }
+  _AnimatedCounterState createState() => _AnimatedCounterState();
 }
 
-class MyCustomPainter extends CustomPainter {
+class _AnimatedCounterState extends State<AnimatedCounter>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+  int _count = 0;
+  
   @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.blue
-      ..style = PaintingStyle.fill;
-    
-    canvas.drawCircle(
-      Offset(size.width / 2, size.height / 2),
-      size.width / 4,
-      paint,
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: Duration(milliseconds: 500),
+      vsync: this,
     );
+    _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
   }
   
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
-```
-
-## 性能优化
-
-### 1. const 构造函数
-
-```dart
-// 使用 const 构造函数
-const MyWidget({Key? key}) : super(key: key);
-
-// 在 build 方法中使用 const
-@override
-Widget build(BuildContext context) {
-  return Column(
-    children: [
-      const Text('Static Text'),
-      const SizedBox(height: 16.0),
-      const Icon(Icons.star),
-    ],
-  );
-}
-```
-
-### 2. RepaintBoundary
-
-```dart
-RepaintBoundary(
-  child: MyExpensiveWidget(),
-)
-```
-
-### 3. 避免不必要的重建
-
-```dart
-class OptimizedWidget extends StatelessWidget {
-  final String title;
-  final int count;
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
   
-  const OptimizedWidget({
-    Key? key,
-    required this.title,
-    required this.count,
-  }) : super(key: key);
+  void _increment() {
+    setState(() {
+      _count++;
+    });
+    _controller.forward().then((_) {
+      _controller.reverse();
+    });
+  }
   
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(title), // 只有 title 变化时重建
-        Text('Count: $count'), // 只有 count 变化时重建
+        ScaleTransition(
+          scale: _animation,
+          child: Text(
+            '$_count',
+            style: TextStyle(fontSize: 48),
+          ),
+        ),
+        ElevatedButton(
+          onPressed: _increment,
+          child: Text('Increment'),
+        ),
       ],
     );
   }
 }
 ```
 
-## 总结
+## Widget 生命周期
 
-Flutter Widget 系统的特点：
-- **一切都是 Widget**: 从文本到布局，从按钮到页面
-- **组合优于继承**: 通过组合简单 Widget 创建复杂界面
-- **声明式编程**: 描述 UI 应该是什么样子，而不是如何构建
-- **不可变性**: Widget 是不可变的，状态变化通过重建实现
-- **性能优化**: 通过 const 构造函数、RepaintBoundary 等机制优化性能 
+### StatelessWidget 生命周期
+
+```dart
+class MyStatelessWidget extends StatelessWidget {
+  // 构造函数
+  MyStatelessWidget({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    // build 方法在每次重建时调用
+    return Container();
+  }
+}
+```
+
+### StatefulWidget 生命周期
+
+```dart
+class MyStatefulWidget extends StatefulWidget {
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  void initState() {
+    super.initState();
+    // 初始化状态
+  }
+  
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // 依赖项发生变化时调用
+  }
+  
+  @override
+  Widget build(BuildContext context) {
+    // 构建 Widget
+    return Container();
+  }
+  
+  @override
+  void didUpdateWidget(MyStatefulWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Widget 配置更新时调用
+  }
+  
+  @override
+  void dispose() {
+    // 清理资源
+    super.dispose();
+  }
+}
+```
+
+## 性能优化
+
+### const 构造函数
+
+```dart
+// 使用 const 构造函数提高性能
+const Text('Hello World')
+const Icon(Icons.star)
+const SizedBox(width: 100, height: 100)
+```
+
+### 避免不必要的重建
+
+```dart
+class OptimizedWidget extends StatelessWidget {
+  // 使用 const 构造函数
+  const OptimizedWidget({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: const [
+        Text('Static text'),
+        Icon(Icons.star),
+      ],
+    );
+  }
+}
+```
+
+---
+
+*Widget 系统是 Flutter 的核心，掌握好这些基础组件和概念，就能构建出功能丰富的应用界面。* 
