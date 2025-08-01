@@ -75,6 +75,10 @@ export default defineConfig({
           {
             items: [
               {
+                text: '创作灵感与设计思路',
+                link: '/personal/',
+              },
+              {
                 text: 'App设计思路',
                 link: '/personal/app-design/',
               },
