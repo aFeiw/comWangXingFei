@@ -76,12 +76,20 @@ export default defineConfig({
                 text: 'Flutter',
                 link: '/frontend/CrossPlatform/',
               },
+              {
+                text: 'React Native',
+                link: '/frontend/CrossPlatform/ReactNative/',
+              },
+              {
+                text: '混合开发',
+                link: '/frontend/CrossPlatform/Hybrid/',
+              },
             ],
           },
         ],
       },
       {
-        text: '大前端',
+        text: '前端',
         activeMatch: '/frontend/',
         items: [
           {
@@ -114,11 +122,31 @@ export default defineConfig({
                 text: 'React',
                 link: '/frontend/React/',
               },
+              {
+                text: 'Next.js',
+                link: '/frontend/NextJS/',
+              },
+              {
+                text: 'Nuxt.js',
+                link: '/frontend/NuxtJS/',
+              },
             ],
           },
           {
-            text: 'Webpack',
-            link: '/frontend/Webpack/basic',
+            items: [
+              {
+                text: 'Webpack',
+                link: '/frontend/Webpack/basic',
+              },
+              {
+                text: 'Vite',
+                link: '/frontend/Vite/',
+              },
+              {
+                text: 'Rollup',
+                link: '/frontend/Rollup/',
+              },
+            ],
           },
           {
             items: [
@@ -136,6 +164,22 @@ export default defineConfig({
               },
             ],
           },
+          {
+            items: [
+              {
+                text: 'Tailwind CSS',
+                link: '/frontend/TailwindCSS/',
+              },
+              {
+                text: 'Sass/Less',
+                link: '/frontend/SassLess/',
+              },
+              {
+                text: 'PostCSS',
+                link: '/frontend/PostCSS/',
+              },
+            ],
+          },
         ],
       },
       {
@@ -149,8 +193,24 @@ export default defineConfig({
                 link: '/backend/JavaSE/',
               },
               {
+                text: 'Spring Boot',
+                link: '/backend/SpringBoot/',
+              },
+              {
                 text: 'Maven',
                 link: '/backend/Maven/',
+              },
+            ],
+          },
+          {
+            items: [
+              {
+                text: 'SQL',
+                link: '/backend/SQL/',
+              },
+              {
+                text: 'Redis',
+                link: '/backend/Redis/',
               },
             ],
           },
@@ -169,6 +229,14 @@ export default defineConfig({
               {
                 text: 'Git',
                 link: '/toolSoftware/Git/',
+              },
+            ],
+          },
+          {
+            items: [
+              {
+                text: 'AI 工具',
+                link: '/toolSoftware/AI/',
               },
             ],
           },
