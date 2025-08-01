@@ -24,15 +24,18 @@
           {{ data.tagline || $description || 'Welcome to your VuePress site' }}
         </p>
   
-        <p
-          v-if="data.actionText && data.actionLink"
-          class="action"
+        <div
+          v-if="data.actions && data.actions.length"
+          class="actions"
         >
           <NavLink
+            v-for="action in data.actions"
+            :key="action.text"
             class="action-button"
-            :item="actionLink"
+            :class="action.theme"
+            :item="action"
           />
-        </p>
+        </div>
       </header>
   
       <div
@@ -77,13 +80,6 @@
     computed: {
       data () {
         return this.$page.frontmatter
-      },
-  
-      actionLink () {
-        return {
-          link: this.data.actionLink,
-          text: this.data.actionText
-        }
       }
     },
     methods: {
@@ -109,28 +105,65 @@
         margin 3rem auto 1.5rem
       h1
         font-size 3rem
-      h1, .description, .action
+      h1, .description, .actions
         margin 1.8rem auto
       .description
         max-width 35rem
         font-size 1.6rem
         line-height 1.3
         color lighten(#000, 40%)
+      .actions
+        display flex
+        flex-wrap wrap
+        justify-content center
+        gap 1rem
+        margin-top 2rem
       .action-button
         display inline-block
         font-size 1.2rem
         color #fff
-        background-color $accentColor
         padding 0.8rem 1.6rem
-        border-radius 4px
-        transition background-color .1s ease
+        border-radius 8px
+        transition all .3s ease
         box-sizing border-box
-        border-bottom 1px solid darken($accentColor, 10%)
-        .icon.outbound {
+        text-decoration none
+        font-weight 500
+        position relative
+        overflow hidden
+        border none
+        cursor pointer
+        
+        &::before
+          content ''
+          position absolute
+          top 0
+          left -100%
+          width 100%
+          height 100%
+          background linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)
+          transition left 0.5s
+          
+        &:hover::before
+          left 100%
+          
+        &.brand
+          background linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+          box-shadow 0 4px 15px rgba(102, 126, 234, 0.4)
+          &:hover
+            transform translateY(-2px)
+            box-shadow 0 6px 20px rgba(102, 126, 234, 0.6)
+            
+        &.alt
+          background linear-gradient(135deg, #f093fb 0%, #f5576c 100%)
+          box-shadow 0 4px 15px rgba(240, 147, 251, 0.4)
+          &:hover
+            transform translateY(-2px)
+            box-shadow 0 6px 20px rgba(240, 147, 251, 0.6)
+            
+        .icon.outbound
           color #fff
-        }
-        &:hover
-          background-color lighten($accentColor, 10%)
+          margin-left 0.5rem
+          
     .features
       border-top 1px solid $borderColor
       padding 1.2rem 0
@@ -176,6 +209,12 @@
   
   @media (max-width: $MQMobile)
     .home
+      .hero
+        .actions
+          flex-direction column
+          align-items center
+        .action-button
+          width 200px
       .features
         flex-direction column
       .feature
@@ -192,7 +231,7 @@
           margin 2rem auto 1.2rem
         h1
           font-size 2rem
-        h1, .description, .action
+        h1, .description, .actions
           margin 1.2rem auto
         .description
           font-size 1.2rem

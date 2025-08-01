@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: 早期博客 🎙️
       link: https://afeiw.github.io/aFeiWebsite/
+    - theme: alt
+      text: 原创作品 🍸
+      link: http://flyahub.cn/
 features:
     - title: 💡 Instant Server Start
       details: On demand file serving over native ESM, no bundling required!
