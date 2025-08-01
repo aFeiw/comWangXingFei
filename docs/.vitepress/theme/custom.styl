@@ -7,6 +7,42 @@
   --vp-c-brand-dark: #399EE5;
 }
 
+// 主页按钮样式 - 保持原有尺寸和形状，只添加颜色和效果
+.VPHomeHero .actions .VPButton {
+  transition: all 0.3s ease !important;
+}
+
+.VPHomeHero .actions .VPButton.brand {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+.VPHomeHero .actions .VPButton.brand:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6) !important;
+}
+
+.VPHomeHero .actions .VPButton.alt {
+  border: 2px solid var(--vp-c-brand) !important;
+  color: var(--vp-c-brand) !important;
+  background: transparent !important;
+}
+
+.VPHomeHero .actions .VPButton.alt:hover {
+  background: var(--vp-c-brand) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+}
+
+@media (max-width: 768px) {
+  .VPHomeHero .actions {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
 .home-features .container h2{
   line-height 56px
   padding-bottom 0
