@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习 →
-      link: /frontend/HTML/
+      link: /personal/
     - theme: alt
       text: 了解作者 🖖
       link: https://afei-1122.github.io/aFeiWebsite/

@@ -270,8 +270,6 @@ export default defineConfig({
           },
         ],
       },
-
-      { text: '简书', link: 'https://www.jianshu.com/u/94f29127275f' },
     ],
     sidebar: {
       '/frontend/HTML/': frontendHTML(),
