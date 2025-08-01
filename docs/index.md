@@ -8,7 +8,7 @@ hero:
     alt: VitePress
   actions:
     - theme: brand
-      text: 开始学习 →
+      text: START →
       link: /personal/
     - theme: alt
       text: 了解作者 🖖
