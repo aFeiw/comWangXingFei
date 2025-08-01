@@ -70,33 +70,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       {
         text: '创作灵感',
-        activeMatch: '/personal/',
-        items: [
-          {
-            items: [
-              {
-                text: '创作灵感与设计思路',
-                link: '/personal/',
-              },
-              {
-                text: 'App设计思路',
-                link: '/personal/app-design/',
-              },
-              {
-                text: '业务发现与创新',
-                link: '/personal/business-innovation/',
-              },
-              {
-                text: '产品思维',
-                link: '/personal/product-thinking/',
-              },
-              {
-                text: '用户体验设计',
-                link: '/personal/ux-design/',
-              },
-            ],
-          },
-        ],
+        link: '/personal/',
       },
       {
         text: '跨平台解决方案',
