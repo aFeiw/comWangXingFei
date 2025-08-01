@@ -14,7 +14,7 @@ hero:
       text: 早期博客 🎙️
       link: https://afeiw.github.io/aFeiWebsite/
     - theme: alt
-      text: 原创作品 🍸
+      text: 原创作品 -> 调酒吧APP🍸
       link: http://flyahub.cn/
 features:
     - title: 💡 Instant Server Start
