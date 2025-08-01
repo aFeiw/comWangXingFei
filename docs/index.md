@@ -11,7 +11,7 @@ hero:
       text: START →
       link: /personal/
     - theme: alt
-      text: 早期播客 🎙️
+      text: 早期博客 🎙️
       link: https://afeiw.github.io/aFeiWebsite/
 features:
     - title: 💡 Instant Server Start
