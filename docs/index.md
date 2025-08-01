@@ -11,8 +11,8 @@ hero:
       text: START →
       link: /personal/
     - theme: alt
-      text: 了解作者 🖖
-      link: https://afei-1122.github.io/aFeiWebsite/
+      text: 早期播客 🎙️
+      link: https://afeiw.github.io/aFeiWebsite/
 features:
     - title: 💡 Instant Server Start
       details: On demand file serving over native ESM, no bundling required!
