@@ -57,6 +57,7 @@ export default defineConfig({
   themeConfig: {
     siteTitle: '王兴飞',
     logo: '/logo.svg',
+    siteTitle: false,
     // 获取每个文件最后一次 git 提交的 UNIX 时间戳(ms)，同时它将以合适的日期格式显示在每一页的底部
     lastUpdatedText: '最近更新时间',
     outlineTitle: '在本页面',
