@@ -190,8 +190,11 @@ span.clip{
         max-width: none;
         object-fit: contain;
     }
-    .VPHero.has-image.VPHomeHero {
-    padding: calc(var(--vp-nav-height) + 8px) 24px 48px;
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+        .VPHero.has-image.VPHomeHero {
+            padding: calc(var(--vp-nav-height) + 8px) 24px 48px;
+        }
     }
 }
  
