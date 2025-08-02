@@ -13,8 +13,8 @@ cd docs/.vitepress/dist
 # echo 'www.example.com' > CNAME
 
 # 删除现有的 .git 目录，重新初始化
-rm -rf .git
-git init
+# rm -rf .git
+# git init
 
 git add -A
  
