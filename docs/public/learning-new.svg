@@ -1,0 +1,141 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 编辑器背景渐变 -->
+    <linearGradient id="editorBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e1e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#252526;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 标题栏渐变 -->
+    <linearGradient id="titleBarGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3c3c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d2d30;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 代码高亮颜色 -->
+    <linearGradient id="keywordGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#569cd6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ec9b0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="stringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ce9178;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d7ba7d;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="commentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a9955;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#608b4e;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="functionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dcdcaa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c586c0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 编辑器主容器 -->
+  <rect width="400" height="300" fill="url(#editorBg)" rx="8"/>
+  
+  <!-- 标题栏 -->
+  <rect x="0" y="0" width="400" height="30" fill="url(#titleBarGradient)" rx="8 8 0 0"/>
+  
+  <!-- 标题栏按钮 -->
+  <circle cx="15" cy="15" r="6" fill="#ff5f56"/>
+  <circle cx="35" cy="15" r="6" fill="#ffbd2e"/>
+  <circle cx="55" cy="15" r="6" fill="#27ca3f"/>
+  
+  <!-- 文件标签 -->
+  <rect x="80" y="5" width="120" height="20" fill="#1e1e1e" rx="4"/>
+  <text x="140" y="18" font-family="monospace" font-size="12" fill="#cccccc" text-anchor="middle">hello.js</text>
+  
+  <!-- 侧边栏 -->
+  <rect x="0" y="30" width="60" height="270" fill="#252526"/>
+  
+  <!-- 侧边栏图标 -->
+  <rect x="15" y="45" width="30" height="30" fill="#4ec9b0" opacity="0.8" rx="4"/>
+  <text x="30" y="65" font-family="monospace" font-size="16" fill="#1e1e1e" text-anchor="middle">JS</text>
+  
+  <rect x="15" y="85" width="30" height="30" fill="#569cd6" opacity="0.6" rx="4"/>
+  <text x="30" y="105" font-family="monospace" font-size="12" fill="#1e1e1e" text-anchor="middle">CSS</text>
+  
+  <rect x="15" y="125" width="30" height="30" fill="#ce9178" opacity="0.6" rx="4"/>
+  <text x="30" y="145" font-family="monospace" font-size="12" fill="#1e1e1e" text-anchor="middle">HTML</text>
+  
+  <!-- 代码区域 -->
+  <rect x="60" y="30" width="340" height="270" fill="#1e1e1e"/>
+  
+  <!-- 行号 -->
+  <text x="75" y="55" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">1</text>
+  <text x="75" y="75" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">2</text>
+  <text x="75" y="95" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">3</text>
+  <text x="75" y="115" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">4</text>
+  <text x="75" y="135" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">5</text>
+  <text x="75" y="155" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">6</text>
+  <text x="75" y="175" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">7</text>
+  <text x="75" y="195" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">8</text>
+  <text x="75" y="215" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">9</text>
+  <text x="75" y="235" font-family="monospace" font-size="12" fill="#858585" text-anchor="end">10</text>
+  
+  <!-- 代码内容 -->
+  <!-- 第1行 - 注释 -->
+  <text x="85" y="55" font-family="monospace" font-size="12" fill="url(#commentGradient)">// Hello World 示例</text>
+  
+  <!-- 第2行 - 空行 -->
+  
+  <!-- 第3行 - function关键字 -->
+  <text x="85" y="75" font-family="monospace" font-size="12" fill="url(#keywordGradient)">function</text>
+  <text x="145" y="75" font-family="monospace" font-size="12" fill="url(#functionGradient)">sayHello</text>
+  <text x="205" y="75" font-family="monospace" font-size="12" fill="#cccccc">() {</text>
+  
+  <!-- 第4行 - console.log -->
+  <text x="105" y="95" font-family="monospace" font-size="12" fill="#cccccc">console.</text>
+  <text x="165" y="95" font-family="monospace" font-size="12" fill="url(#functionGradient)">log</text>
+  <text x="185" y="95" font-family="monospace" font-size="12" fill="#cccccc">(</text>
+  <text x="195" y="95" font-family="monospace" font-size="12" fill="url(#stringGradient)">"Hello, World!"</text>
+  <text x="295" y="95" font-family="monospace" font-size="12" fill="#cccccc">);</text>
+  
+  <!-- 第5行 - 结束括号 -->
+  <text x="85" y="115" font-family="monospace" font-size="12" fill="#cccccc">}</text>
+  
+  <!-- 第6行 - 空行 -->
+  
+  <!-- 第7行 - 调用函数 -->
+  <text x="85" y="135" font-family="monospace" font-size="12" fill="url(#functionGradient)">sayHello</text>
+  <text x="145" y="135" font-family="monospace" font-size="12" fill="#cccccc">();</text>
+  
+  <!-- 第8行 - 空行 -->
+  
+  <!-- 第9行 - 输出结果 -->
+  <text x="85" y="175" font-family="monospace" font-size="12" fill="#858585">// 输出: Hello, World!</text>
+  
+  <!-- 第10行 - 更多代码 -->
+  <text x="85" y="195" font-family="monospace" font-size="12" fill="url(#keywordGradient)">const</text>
+  <text x="125" y="195" font-family="monospace" font-size="12" fill="#cccccc">message = </text>
+  <text x="185" y="195" font-family="monospace" font-size="12" fill="url(#stringGradient)">"Welcome to coding!"</text>
+  <text x="305" y="195" font-family="monospace" font-size="12" fill="#cccccc">;</text>
+  
+  <!-- 光标闪烁效果 -->
+  <rect x="85" y="210" width="2" height="15" fill="#cccccc" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- 状态栏 -->
+  <rect x="0" y="270" width="400" height="30" fill="#007acc"/>
+  <text x="10" y="285" font-family="monospace" font-size="10" fill="#ffffff">JavaScript</text>
+  <text x="350" y="285" font-family="monospace" font-size="10" fill="#ffffff" text-anchor="end">Ln 10, Col 1</text>
+  
+  <!-- 装饰性元素 -->
+  <!-- 代码折叠指示器 -->
+  <polygon points="85,70 95,75 85,80" fill="#858585" opacity="0.6"/>
+  
+  <!-- 错误提示 -->
+  <circle cx="380" cy="45" r="8" fill="#f44747" opacity="0.8"/>
+  <text x="380" y="50" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">!</text>
+  
+  <!-- 智能提示 -->
+  <rect x="200" y="100" width="120" height="60" fill="#2d2d30" rx="4" opacity="0.9"/>
+  <text x="210" y="115" font-family="monospace" font-size="10" fill="#cccccc">console.log()</text>
+  <text x="210" y="130" font-family="monospace" font-size="8" fill="#858585">Prints text to the console</text>
+  <text x="210" y="145" font-family="monospace" font-size="8" fill="#858585">Parameters: message</text>
+</svg> 
