@@ -30,6 +30,10 @@ import { backendMaven} from "../../router/backend/maven"
 import {plugInExtensionTuiEditor}from "../../router/PlugInExtension/tuiEditor"
 //引入创作灵感侧边栏导航配置
 import { personalInspiration } from "../../router/personal/inspiration"
+//引入APP方案实现与功能侧边栏导航配置
+import { personalAppSolutions } from "../../router/personal/appSolutions"
+//引入调酒吧APP业务逻辑侧边栏导航配置
+import { personalCocktailBarApp } from "../../router/personal/cocktailBarApp"
 import { defineConfig } from 'vitepress'
 export default defineConfig({
   //配置
@@ -70,7 +74,25 @@ export default defineConfig({
       { text: '首页', link: '/' },
       {
         text: '创作灵感',
-        link: '/personal/',
+        activeMatch: '/personal/',
+        items: [
+          {
+            items: [
+              {
+                text: '创作灵感',
+                link: '/personal/',
+              },
+              {
+                text: 'APP方案实现与功能',
+                link: '/personal/app-solutions/',
+              },
+              {
+                text: '调酒吧APP业务逻辑',
+                link: '/personal/cocktail-bar-app/',
+              },
+            ],
+          },
+        ],
       },
       {
         text: '跨平台解决方案',
@@ -269,7 +291,9 @@ export default defineConfig({
       '/PlugInExtension/problemRecord/qus':plugInExtensionTuiEditor(),
       '/PlugInExtension/problemRecord/qus2':plugInExtensionTuiEditor(),
       '/PlugInExtension/problemRecord/qus3':plugInExtensionTuiEditor(),
-      // '/personal/': personalInspiration(),
+      '/personal/': personalInspiration(),
+      '/personal/app-solutions/': personalAppSolutions(),
+      '/personal/cocktail-bar-app/': personalCocktailBarApp(),
     },
     footer: {
       message: 'Released under the MIT License.',
