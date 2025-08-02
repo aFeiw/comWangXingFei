@@ -129,9 +129,9 @@
   <!-- 代码折叠指示器 -->
   <polygon points="85,70 95,75 85,80" fill="#858585" opacity="0.6"/>
   
-  <!-- 错误提示 -->
-  <circle cx="380" cy="45" r="8" fill="#f44747" opacity="0.8"/>
-  <text x="380" y="50" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">!</text>
+  <!-- 成功提示 -->
+  <circle cx="380" cy="45" r="8" fill="#27ca3f" opacity="0.8"/>
+  <text x="380" y="50" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">✓</text>
   
   <!-- 智能提示 -->
   <rect x="200" y="100" width="140" height="60" fill="#2d2d30" rx="4" opacity="0.9"/>
