@@ -21,7 +21,7 @@ git add -A
 git commit -m '版本发布'
 
 # 推送到目标分支
-git push -f https://github.com/aFeiw/comWangXingFei HEAD:deploy-version-20250802
+git push -f https://github.com/aFeiw/comWangXingFei HEAD:deploy-version-20250808
 
 # # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
