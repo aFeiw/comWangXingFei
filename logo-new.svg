@@ -1,0 +1,128 @@
+<svg width="500" height="150" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 主渐变 -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#008DF7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1199FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00BBFF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 立体阴影渐变 -->
+    <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0056B3;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#008DF7;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- 高光渐变 -->
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6F3FF;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- 内阴影渐变 -->
+    <linearGradient id="innerShadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0056B3;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- X 字母 - 更大更粗，居中显示 -->
+  <g transform="translate(50, 30)">
+    <!-- X 内阴影层 -->
+    <path d="M12 12 L48 48 M48 12 L12 48" stroke="url(#innerShadowGradient)" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+    <!-- X 阴影层 -->
+    <path d="M10 10 L46 46 M46 10 L10 46" stroke="url(#shadowGradient)" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <!-- X 主层 -->
+    <path d="M12 12 L48 48 M48 12 L12 48" stroke="url(#mainGradient)" stroke-width="14" stroke-linecap="round"/>
+    <!-- X 高光层 -->
+    <path d="M14 14 L46 46 M46 14 L14 46" stroke="url(#highlightGradient)" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- I 字母 -->
+  <g transform="translate(120, 30)">
+    <!-- I 内阴影层 -->
+    <rect x="18" y="12" width="14" height="60" rx="7" fill="url(#innerShadowGradient)" opacity="0.8"/>
+    <!-- I 阴影层 -->
+    <rect x="16" y="10" width="14" height="60" rx="7" fill="url(#shadowGradient)" opacity="0.9"/>
+    <!-- I 主层 -->
+    <rect x="18" y="12" width="14" height="60" rx="7" fill="url(#mainGradient)"/>
+    <!-- I 高光层 -->
+    <rect x="20" y="14" width="10" height="56" rx="5" fill="url(#highlightGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- N 字母 -->
+  <g transform="translate(180, 30)">
+    <!-- N 内阴影层 -->
+    <path d="M12 12 L12 72 M12 12 L48 72 M48 12 L48 72" stroke="url(#innerShadowGradient)" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+    <!-- N 阴影层 -->
+    <path d="M10 10 L10 70 M10 10 L46 70 M46 10 L46 70" stroke="url(#shadowGradient)" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <!-- N 主层 -->
+    <path d="M12 12 L12 72 M12 12 L48 72 M48 12 L48 72" stroke="url(#mainGradient)" stroke-width="14" stroke-linecap="round"/>
+    <!-- N 高光层 -->
+    <path d="M14 14 L14 70 L14 14 L46 70 M46 14 L46 70" stroke="url(#highlightGradient)" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- G 字母 -->
+  <g transform="translate(260, 30)">
+    <!-- G 内阴影层 -->
+    <path d="M42 24 A18 18 0 0 1 42 60 A18 18 0 0 1 24 42 L36 42" stroke="url(#innerShadowGradient)" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <!-- G 阴影层 -->
+    <path d="M40 22 A16 16 0 0 1 40 58 A16 16 0 0 1 24 42 L34 42" stroke="url(#shadowGradient)" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.9"/>
+    <!-- G 主层 -->
+    <path d="M42 24 A18 18 0 0 1 42 60 A18 18 0 0 1 24 42 L36 42" stroke="url(#mainGradient)" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <!-- G 高光层 -->
+    <path d="M44 26 A16 16 0 0 1 44 58 A16 16 0 0 1 26 42 L38 42" stroke="url(#highlightGradient)" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+  
+  <!-- F 字母 -->
+  <g transform="translate(340, 30)">
+    <!-- F 内阴影层 -->
+    <path d="M12 12 L54 12 M12 12 L12 72 M12 30 L42 30" stroke="url(#innerShadowGradient)" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+    <!-- F 阴影层 -->
+    <path d="M10 10 L52 10 M10 10 L10 70 M10 28 L40 28" stroke="url(#shadowGradient)" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <!-- F 主层 -->
+    <path d="M12 12 L54 12 M12 12 L12 72 M12 30 L42 30" stroke="url(#mainGradient)" stroke-width="14" stroke-linecap="round"/>
+    <!-- F 高光层 -->
+    <path d="M14 14 L52 14 M14 12 L14 70 M14 32 L40 32" stroke="url(#highlightGradient)" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- E 字母 -->
+  <g transform="translate(420, 30)">
+    <!-- E 内阴影层 -->
+    <path d="M12 12 L54 12 M12 12 L12 72 M12 30 L42 30 M12 60 L54 60" stroke="url(#innerShadowGradient)" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+    <!-- E 阴影层 -->
+    <path d="M10 10 L52 10 M10 10 L10 70 M10 28 L40 28 M10 58 L52 58" stroke="url(#shadowGradient)" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <!-- E 主层 -->
+    <path d="M12 12 L54 12 M12 12 L12 72 M12 30 L42 30 M12 60 L54 60" stroke="url(#mainGradient)" stroke-width="14" stroke-linecap="round"/>
+    <!-- E 高光层 -->
+    <path d="M14 14 L52 14 M14 12 L14 70 M14 32 L40 32 M14 62 L52 62" stroke="url(#highlightGradient)" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- I 字母 -->
+  <g transform="translate(500, 30)">
+    <!-- I 内阴影层 -->
+    <rect x="18" y="12" width="14" height="60" rx="7" fill="url(#innerShadowGradient)" opacity="0.8"/>
+    <!-- I 阴影层 -->
+    <rect x="16" y="10" width="14" height="60" rx="7" fill="url(#shadowGradient)" opacity="0.9"/>
+    <!-- I 主层 -->
+    <rect x="18" y="12" width="14" height="60" rx="7" fill="url(#mainGradient)"/>
+    <!-- I 高光层 -->
+    <rect x="20" y="14" width="10" height="56" rx="5" fill="url(#highlightGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- 装饰性光效 -->
+  <!-- 左上角光点 -->
+  <circle cx="40" cy="40" r="6" fill="url(#highlightGradient)" opacity="0.6"/>
+  <!-- 右下角光点 -->
+  <circle cx="460" cy="110" r="7" fill="url(#highlightGradient)" opacity="0.4"/>
+  <!-- 中间装饰光点 -->
+  <circle cx="250" cy="130" r="4" fill="url(#highlightGradient)" opacity="0.5"/>
+  
+  <!-- 字母间的连接光效 -->
+  <line x1="90" y1="60" x2="120" y2="60" stroke="url(#highlightGradient)" stroke-width="3" opacity="0.3"/>
+  <line x1="150" y1="60" x2="180" y2="60" stroke="url(#highlightGradient)" stroke-width="3" opacity="0.3"/>
+  <line x1="230" y1="60" x2="260" y2="60" stroke="url(#highlightGradient)" stroke-width="3" opacity="0.3"/>
+  <line x1="310" y1="60" x2="340" y2="60" stroke="url(#highlightGradient)" stroke-width="3" opacity="0.3"/>
+  <line x1="390" y1="60" x2="420" y2="60" stroke="url(#highlightGradient)" stroke-width="3" opacity="0.3"/>
+  <line x1="470" y1="60" x2="500" y2="60" stroke="url(#highlightGradient)" stroke-width="3" opacity="0.3"/>
+</svg> 
