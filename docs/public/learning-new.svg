@@ -93,7 +93,7 @@
   <text x="165" y="95" font-family="monospace" font-size="12" fill="url(#functionGradient)">log</text>
   <text x="185" y="95" font-family="monospace" font-size="12" fill="#cccccc">(</text>
   <text x="195" y="95" font-family="monospace" font-size="12" fill="url(#stringGradient)">"Hello, World!"</text>
-  <text x="295" y="95" font-family="monospace" font-size="12" fill="#cccccc">);</text>
+  <text x="305" y="95" font-family="monospace" font-size="12" fill="#cccccc">);</text>
   
   <!-- 第5行 - 结束括号 -->
   <text x="85" y="115" font-family="monospace" font-size="12" fill="#cccccc">}</text>
