@@ -160,7 +160,32 @@ span.clip{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-39%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 确保图片容器居中 */
+.VPHomeHero .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .VPHomeHero .image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .image-src {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 }
 div#VPContent {
     margin-top: 2vh !important;
