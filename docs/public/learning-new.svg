@@ -112,7 +112,7 @@
   <!-- 第10行 - 更多代码 -->
   <text x="85" y="195" font-family="monospace" font-size="12" fill="url(#keywordGradient)">const</text>
   <text x="125" y="195" font-family="monospace" font-size="12" fill="#cccccc">message = </text>
-  <text x="185" y="195" font-family="monospace" font-size="12" fill="url(#stringGradient)">"Welcome to coding!"</text>
+  <text x="185" y="195" font-family="monospace" font-size="12" fill="url(#stringGradient)">"欢迎体验调酒APP"</text>
   <text x="305" y="195" font-family="monospace" font-size="12" fill="#cccccc">;</text>
   
   <!-- 光标闪烁效果 -->
