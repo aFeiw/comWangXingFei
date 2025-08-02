@@ -38,9 +38,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   //配置
   base: '/comWangXingFei/',
-  title: '王兴飞文档',
-  titleTemplate: '王兴飞文档',
-  description: 'Vite & Vue powered static site generator.',
+  title: 'WANGXINGFEI文档',
+  titleTemplate: 'WANGXINGFEI文档',
+  description: 'Vite & Vue powered wangxingfei site generator.',
   appearance: true,
   lang: 'zh-CN',
   lastUpdated: true,
@@ -55,9 +55,8 @@ export default defineConfig({
   ],
   // 主题配置
   themeConfig: {
-    siteTitle: '王兴飞',
+    siteTitle: 'XINGFEI',
     logo: '/logo.svg',
-    siteTitle: false,
     // 获取每个文件最后一次 git 提交的 UNIX 时间戳(ms)，同时它将以合适的日期格式显示在每一页的底部
     lastUpdatedText: '最近更新时间',
     outlineTitle: '在本页面',
